@@ -12,6 +12,7 @@
 
 @synthesize onSuccess;
 @synthesize onError;
+@synthesize onLoadingChanged;
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString* host = [[request URL] host];
@@ -29,11 +30,11 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    
+    onLoadingChanged(YES);
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    
+    onLoadingChanged(NO);
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {

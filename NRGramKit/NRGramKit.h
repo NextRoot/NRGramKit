@@ -34,6 +34,7 @@ typedef void (^PaginationDataMetaResultBlock)(NSDictionary*,NSDictionary*,NSDict
 typedef void (^SubscriptionArrayResultBlock)(NSArray*);
 typedef void (^LoginResultBlock)(IGUser* user,NSString* error);
 typedef void (^OperationSuccessBlock)(BOOL);
+typedef void (^LoginLoadingBlock)(BOOL);
 
 typedef enum {
     IGIncomingRelationshipFollowedBy,
@@ -65,7 +66,7 @@ typedef void(^RelationshipResultBlock)(IGIncomingRelationshipStatus,IGOutgoingRe
 }
 +(BOOL) isLoggedIn;
 +(IGUser*) loggedInUser;
-+(void)loginInWebView:(UIWebView*)webview loginFinishedCallback:(LoginResultBlock)callback;
++(void)loginInWebView:(UIWebView*)webview loginLoadingCallback:(LoginLoadingBlock)loadingCallback finishedCallback:(LoginResultBlock)callback;
 +(void)logout;
 +(void)getUrl:(id)url withCallback:(PaginationDictionaryResultBlock)callback;
 +(void)getUrl:(id)url withCompleteCallback:(PaginationDataMetaResultBlock)callback;
