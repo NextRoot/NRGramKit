@@ -10,10 +10,12 @@
 
 typedef void (^AccessTokenResultBlock)(NSString*);
 typedef void (^ErrorResultBlock)(NSString*);
+typedef void (^LoadingBlock)(BOOL);
 
 @interface InstagramLoginDelegate : NSObject<UIWebViewDelegate>
 
 @property (copy) AccessTokenResultBlock onSuccess;
 @property (copy) ErrorResultBlock onError;
+@property (copy) LoadingBlock onLoadingChanged;
 
 @end

@@ -76,7 +76,7 @@ static NSString* access_token;
 }
 
 
-+(void)loginInWebView:(UIWebView*)webview loginFinishedCallback:(LoginResultBlock)callback
++(void)loginInWebView:(UIWebView*)webview loginLoadingCallback:(LoginLoadingBlock)loadingCallback finishedCallback:(LoginResultBlock)callback
 {
     InstagramLoginDelegate* loginDelegate = [[InstagramLoginDelegate alloc]init];
     __block id delegate = loginDelegate;
@@ -99,6 +99,10 @@ static NSString* access_token;
         delegate = nil;
         callback(nil,error);
     };  
+    
+    loginDelegate.onLoadingChanged = ^(BOOL loading){
+        loadingCallback(loading);
+    };
     
     NSHTTPCookie *cookie;
     NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
