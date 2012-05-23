@@ -8,5 +8,6 @@
 
     #define CLIENT_ID               @"5169fdc18d6f487bbfb7ed8856ba3846"
     #define CLIENT_SECRET           @"1fbe2d2307404c64ae90e98e4f18e4af"
+    #define CALLBACK_URL            @"http://api.instamapapp.com/callback"
 
 #endif

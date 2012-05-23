@@ -79,7 +79,8 @@ static NSString* access_token;
 +(void)loginInWebView:(UIWebView*)webview loginFinishedCallback:(LoginResultBlock)callback
 {
     InstagramLoginDelegate* loginDelegate = [[InstagramLoginDelegate alloc]init];
-    webview.delegate = loginDelegate;
+    __block id delegate = loginDelegate;
+    webview.delegate = delegate;
     
     loginDelegate.onSuccess = ^(NSString* accessToken)
     {
@@ -87,6 +88,7 @@ static NSString* access_token;
         [NRGramKit getUserWithId:@"self" withCallback:^(IGUser* user)
          {
              [self setLoggedInUser:user];
+             delegate = nil;
              callback(user,nil);
          }];
         
@@ -94,8 +96,19 @@ static NSString* access_token;
     
     loginDelegate.onError = ^(NSString* error)
     {
+        delegate = nil;
         callback(nil,error);
     };  
+    
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]) {
+        [storage deleteCookie:cookie];
+    }
+    
+    NSString* returnUrl = CALLBACK_URL;
+    NSString* authUrl = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&display=touch&scope=likes+comments+relationships",CLIENT_ID,returnUrl];
+    [webview loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:authUrl] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0]];
 }
 
 
