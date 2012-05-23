@@ -6,7 +6,8 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
-    #define CLIENT_ID               @"<your id here>"
-    #define CLIENT_SECRET           @"<your secret here>"
+    #define CLIENT_ID               @"CLIENT_ID_HERE"
+    #define CLIENT_SECRET           @"CLIENT_SECRET_HERE"
+    #define CALLBACK_URL            @"CALLBACK_URL_HERE"
 
 #endif
