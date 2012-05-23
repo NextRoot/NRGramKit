@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'NRInstagramKit' target in the 'NRInstagramKit' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+    #define CLIENT_ID               @"<your id here>"
+    #define CLIENT_SECRET           @"<your secret here>"
+
+#endif
