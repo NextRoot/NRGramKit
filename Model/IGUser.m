@@ -67,4 +67,13 @@
     return self;
 }
 
+-(NSString *)displayName
+{
+    if(full_name!=nil) return full_name;
+    else if(first_name && last_name!=nil) return [NSString stringWithFormat:@"%@ %@",first_name,last_name];
+    else if(first_name!=nil) return first_name;
+    else if(last_name!=nil) return last_name;
+    else return [NSString stringWithFormat:@"@%@",username];
+}
+
 @end

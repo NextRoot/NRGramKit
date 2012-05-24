@@ -24,4 +24,5 @@
 @property (nonatomic, retain) NSString * website;
 
 +(IGUser*)userWithDictionary:(NSDictionary*)dict;
+-(NSString*)displayName;
 @end
