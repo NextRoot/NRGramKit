@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4BC47A9156FB08600EA15F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47A8156FB08600EA15F7 /* Foundation.framework */; };
+		C4BC47AF156FB08600EA15F7 /* NRGramKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47AE156FB08600EA15F7 /* NRGramKit.m */; };
+		C4BC47CA156FB0DF00EA15F7 /* InstagramEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */; };
+		C4BC47CB156FB0DF00EA15F7 /* InstagramEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */; };
+		C4BC47CC156FB0DF00EA15F7 /* InstagramLoginDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */; };
+		C4BC47CD156FB0DF00EA15F7 /* InstagramLoginDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47C9156FB0DF00EA15F7 /* InstagramLoginDelegate.m */; };
+		C4BC47E5156FB13800EA15F7 /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47D7156FB12500EA15F7 /* libJSONKit.a */; };
+		C4BC47E6156FB13800EA15F7 /* libMKNetworkKit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47E0156FB12A00EA15F7 /* libMKNetworkKit-iOS.a */; };
+		C4BC47FC156FB16200EA15F7 /* IGComment.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47E8156FB16200EA15F7 /* IGComment.h */; };
+		C4BC47FD156FB16200EA15F7 /* IGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47E9156FB16200EA15F7 /* IGComment.m */; };
+		C4BC47FE156FB16200EA15F7 /* IGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47EA156FB16200EA15F7 /* IGImage.h */; };
+		C4BC47FF156FB16200EA15F7 /* IGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47EB156FB16200EA15F7 /* IGImage.m */; };
+		C4BC4800156FB16200EA15F7 /* IGLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47EC156FB16200EA15F7 /* IGLocation.h */; };
+		C4BC4801156FB16200EA15F7 /* IGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47ED156FB16200EA15F7 /* IGLocation.m */; };
+		C4BC4802156FB16200EA15F7 /* IGMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47EE156FB16200EA15F7 /* IGMedia.h */; };
+		C4BC4803156FB16200EA15F7 /* IGMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47EF156FB16200EA15F7 /* IGMedia.m */; };
+		C4BC4804156FB16200EA15F7 /* IGMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F0156FB16200EA15F7 /* IGMetadata.h */; };
+		C4BC4805156FB16200EA15F7 /* IGMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F1156FB16200EA15F7 /* IGMetadata.m */; };
+		C4BC4806156FB16200EA15F7 /* IGPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F2156FB16200EA15F7 /* IGPagination.h */; };
+		C4BC4807156FB16200EA15F7 /* IGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F3156FB16200EA15F7 /* IGPagination.m */; };
+		C4BC4808156FB16200EA15F7 /* IGSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F4156FB16200EA15F7 /* IGSubscription.h */; };
+		C4BC4809156FB16200EA15F7 /* IGSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F5156FB16200EA15F7 /* IGSubscription.m */; };
+		C4BC480A156FB16200EA15F7 /* IGTag.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F6156FB16200EA15F7 /* IGTag.h */; };
+		C4BC480B156FB16200EA15F7 /* IGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F7156FB16200EA15F7 /* IGTag.m */; };
+		C4BC480C156FB16200EA15F7 /* IGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F8156FB16200EA15F7 /* IGUser.h */; };
+		C4BC480D156FB16200EA15F7 /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F9156FB16200EA15F7 /* IGUser.m */; };
+		C4BC480E156FB16200EA15F7 /* Notification.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47FA156FB16200EA15F7 /* Notification.h */; };
+		C4BC480F156FB16200EA15F7 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47FB156FB16200EA15F7 /* Notification.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4BC47D6156FB12500EA15F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63B3F6851563FD34009C6158;
+			remoteInfo = JSONKit;
+		};
+		C4BC47DF156FB12A00EA15F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABB5C25C148B3AE00056D3E9;
+			remoteInfo = "MKNetworkKit-iOS";
+		};
+		C4BC47E1156FB13300EA15F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63B3F6841563FD34009C6158;
+			remoteInfo = JSONKit;
+		};
+		C4BC47E3156FB13300EA15F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB5C25B148B3AE00056D3E9;
+			remoteInfo = "MKNetworkKit-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNRGramKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BC47A8156FB08600EA15F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C4BC47AC156FB08600EA15F7 /* NRGramKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGramKit-Prefix.pch"; sourceTree = "<group>"; };
+		C4BC47AD156FB08600EA15F7 /* NRGramKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRGramKit.h; sourceTree = "<group>"; };
+		C4BC47AE156FB08600EA15F7 /* NRGramKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRGramKit.m; sourceTree = "<group>"; };
+		C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramEngine.h; sourceTree = "<group>"; };
+		C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramEngine.m; sourceTree = "<group>"; };
+		C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginDelegate.h; sourceTree = "<group>"; };
+		C4BC47C9156FB0DF00EA15F7 /* InstagramLoginDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginDelegate.m; sourceTree = "<group>"; };
+		C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONKit.xcodeproj; path = External/JSONKit/JSONKit/JSONKit.xcodeproj; sourceTree = "<group>"; };
+		C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "MKNetworkKit-iOS.xcodeproj"; path = "External/MKNetworkKit/MKNetworkKit-iOS/MKNetworkKit-iOS.xcodeproj"; sourceTree = "<group>"; };
+		C4BC47E8156FB16200EA15F7 /* IGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGComment.h; sourceTree = "<group>"; };
+		C4BC47E9156FB16200EA15F7 /* IGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGComment.m; sourceTree = "<group>"; };
+		C4BC47EA156FB16200EA15F7 /* IGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGImage.h; sourceTree = "<group>"; };
+		C4BC47EB156FB16200EA15F7 /* IGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGImage.m; sourceTree = "<group>"; };
+		C4BC47EC156FB16200EA15F7 /* IGLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLocation.h; sourceTree = "<group>"; };
+		C4BC47ED156FB16200EA15F7 /* IGLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLocation.m; sourceTree = "<group>"; };
+		C4BC47EE156FB16200EA15F7 /* IGMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGMedia.h; sourceTree = "<group>"; };
+		C4BC47EF156FB16200EA15F7 /* IGMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGMedia.m; sourceTree = "<group>"; };
+		C4BC47F0156FB16200EA15F7 /* IGMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGMetadata.h; sourceTree = "<group>"; };
+		C4BC47F1156FB16200EA15F7 /* IGMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGMetadata.m; sourceTree = "<group>"; };
+		C4BC47F2156FB16200EA15F7 /* IGPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGPagination.h; sourceTree = "<group>"; };
+		C4BC47F3156FB16200EA15F7 /* IGPagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGPagination.m; sourceTree = "<group>"; };
+		C4BC47F4156FB16200EA15F7 /* IGSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGSubscription.h; sourceTree = "<group>"; };
+		C4BC47F5156FB16200EA15F7 /* IGSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGSubscription.m; sourceTree = "<group>"; };
+		C4BC47F6156FB16200EA15F7 /* IGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTag.h; sourceTree = "<group>"; };
+		C4BC47F7156FB16200EA15F7 /* IGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTag.m; sourceTree = "<group>"; };
+		C4BC47F8156FB16200EA15F7 /* IGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGUser.h; sourceTree = "<group>"; };
+		C4BC47F9156FB16200EA15F7 /* IGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUser.m; sourceTree = "<group>"; };
+		C4BC47FA156FB16200EA15F7 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
+		C4BC47FB156FB16200EA15F7 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4BC47A2156FB08600EA15F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BC47E5156FB13800EA15F7 /* libJSONKit.a in Frameworks */,
+				C4BC47E6156FB13800EA15F7 /* libMKNetworkKit-iOS.a in Frameworks */,
+				C4BC47A9156FB08600EA15F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4BC479A156FB08600EA15F7 = {
+			isa = PBXGroup;
+			children = (
+				C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */,
+				C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */,
+				C4BC47AA156FB08600EA15F7 /* NRGramKit */,
+				C4BC47A7156FB08600EA15F7 /* Frameworks */,
+				C4BC47A6156FB08600EA15F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4BC47A6156FB08600EA15F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BC47A7156FB08600EA15F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47A8156FB08600EA15F7 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4BC47AA156FB08600EA15F7 /* NRGramKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47AD156FB08600EA15F7 /* NRGramKit.h */,
+				C4BC47AE156FB08600EA15F7 /* NRGramKit.m */,
+				C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */,
+				C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */,
+				C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */,
+				C4BC47C9156FB0DF00EA15F7 /* InstagramLoginDelegate.m */,
+				C4BC47E7156FB16200EA15F7 /* Model */,
+				C4BC47AB156FB08600EA15F7 /* Supporting Files */,
+			);
+			path = NRGramKit;
+			sourceTree = "<group>";
+		};
+		C4BC47AB156FB08600EA15F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47AC156FB08600EA15F7 /* NRGramKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4BC47D0156FB12500EA15F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47D7156FB12500EA15F7 /* libJSONKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BC47D9156FB12A00EA15F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47E0156FB12A00EA15F7 /* libMKNetworkKit-iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BC47E7156FB16200EA15F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47E8156FB16200EA15F7 /* IGComment.h */,
+				C4BC47E9156FB16200EA15F7 /* IGComment.m */,
+				C4BC47EA156FB16200EA15F7 /* IGImage.h */,
+				C4BC47EB156FB16200EA15F7 /* IGImage.m */,
+				C4BC47EC156FB16200EA15F7 /* IGLocation.h */,
+				C4BC47ED156FB16200EA15F7 /* IGLocation.m */,
+				C4BC47EE156FB16200EA15F7 /* IGMedia.h */,
+				C4BC47EF156FB16200EA15F7 /* IGMedia.m */,
+				C4BC47F0156FB16200EA15F7 /* IGMetadata.h */,
+				C4BC47F1156FB16200EA15F7 /* IGMetadata.m */,
+				C4BC47F2156FB16200EA15F7 /* IGPagination.h */,
+				C4BC47F3156FB16200EA15F7 /* IGPagination.m */,
+				C4BC47F4156FB16200EA15F7 /* IGSubscription.h */,
+				C4BC47F5156FB16200EA15F7 /* IGSubscription.m */,
+				C4BC47F6156FB16200EA15F7 /* IGTag.h */,
+				C4BC47F7156FB16200EA15F7 /* IGTag.m */,
+				C4BC47F8156FB16200EA15F7 /* IGUser.h */,
+				C4BC47F9156FB16200EA15F7 /* IGUser.m */,
+				C4BC47FA156FB16200EA15F7 /* Notification.h */,
+				C4BC47FB156FB16200EA15F7 /* Notification.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C4BC47A3156FB08600EA15F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BC47CA156FB0DF00EA15F7 /* InstagramEngine.h in Headers */,
+				C4BC47CC156FB0DF00EA15F7 /* InstagramLoginDelegate.h in Headers */,
+				C4BC47FC156FB16200EA15F7 /* IGComment.h in Headers */,
+				C4BC47FE156FB16200EA15F7 /* IGImage.h in Headers */,
+				C4BC4800156FB16200EA15F7 /* IGLocation.h in Headers */,
+				C4BC4802156FB16200EA15F7 /* IGMedia.h in Headers */,
+				C4BC4804156FB16200EA15F7 /* IGMetadata.h in Headers */,
+				C4BC4806156FB16200EA15F7 /* IGPagination.h in Headers */,
+				C4BC4808156FB16200EA15F7 /* IGSubscription.h in Headers */,
+				C4BC480A156FB16200EA15F7 /* IGTag.h in Headers */,
+				C4BC480C156FB16200EA15F7 /* IGUser.h in Headers */,
+				C4BC480E156FB16200EA15F7 /* Notification.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C4BC47A4156FB08600EA15F7 /* NRGramKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4BC47B2156FB08600EA15F7 /* Build configuration list for PBXNativeTarget "NRGramKit" */;
+			buildPhases = (
+				C4BC47A1156FB08600EA15F7 /* Sources */,
+				C4BC47A2156FB08600EA15F7 /* Frameworks */,
+				C4BC47A3156FB08600EA15F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4BC47E2156FB13300EA15F7 /* PBXTargetDependency */,
+				C4BC47E4156FB13300EA15F7 /* PBXTargetDependency */,
+			);
+			name = NRGramKit;
+			productName = NRGramKit;
+			productReference = C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4BC479C156FB08600EA15F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = NextRoot;
+			};
+			buildConfigurationList = C4BC479F156FB08600EA15F7 /* Build configuration list for PBXProject "NRGramKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C4BC479A156FB08600EA15F7;
+			productRefGroup = C4BC47A6156FB08600EA15F7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C4BC47D0156FB12500EA15F7 /* Products */;
+					ProjectRef = C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */;
+				},
+				{
+					ProductGroup = C4BC47D9156FB12A00EA15F7 /* Products */;
+					ProjectRef = C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C4BC47A4156FB08600EA15F7 /* NRGramKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C4BC47D7156FB12500EA15F7 /* libJSONKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libJSONKit.a;
+			remoteRef = C4BC47D6156FB12500EA15F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C4BC47E0156FB12A00EA15F7 /* libMKNetworkKit-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMKNetworkKit-iOS.a";
+			remoteRef = C4BC47DF156FB12A00EA15F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4BC47A1156FB08600EA15F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BC47AF156FB08600EA15F7 /* NRGramKit.m in Sources */,
+				C4BC47CB156FB0DF00EA15F7 /* InstagramEngine.m in Sources */,
+				C4BC47CD156FB0DF00EA15F7 /* InstagramLoginDelegate.m in Sources */,
+				C4BC47FD156FB16200EA15F7 /* IGComment.m in Sources */,
+				C4BC47FF156FB16200EA15F7 /* IGImage.m in Sources */,
+				C4BC4801156FB16200EA15F7 /* IGLocation.m in Sources */,
+				C4BC4803156FB16200EA15F7 /* IGMedia.m in Sources */,
+				C4BC4805156FB16200EA15F7 /* IGMetadata.m in Sources */,
+				C4BC4807156FB16200EA15F7 /* IGPagination.m in Sources */,
+				C4BC4809156FB16200EA15F7 /* IGSubscription.m in Sources */,
+				C4BC480B156FB16200EA15F7 /* IGTag.m in Sources */,
+				C4BC480D156FB16200EA15F7 /* IGUser.m in Sources */,
+				C4BC480F156FB16200EA15F7 /* Notification.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4BC47E2156FB13300EA15F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONKit;
+			targetProxy = C4BC47E1156FB13300EA15F7 /* PBXContainerItemProxy */;
+		};
+		C4BC47E4156FB13300EA15F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MKNetworkKit-iOS";
+			targetProxy = C4BC47E3156FB13300EA15F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C4BC47B0156FB08600EA15F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C4BC47B1156FB08600EA15F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4BC47B3156FB08600EA15F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NRGramKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NRGramKit/NRGramKit-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "External/**";
+			};
+			name = Debug;
+		};
+		C4BC47B4156FB08600EA15F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NRGramKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NRGramKit/NRGramKit-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "External/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4BC479F156FB08600EA15F7 /* Build configuration list for PBXProject "NRGramKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BC47B0156FB08600EA15F7 /* Debug */,
+				C4BC47B1156FB08600EA15F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4BC47B2156FB08600EA15F7 /* Build configuration list for PBXNativeTarget "NRGramKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BC47B3156FB08600EA15F7 /* Debug */,
+				C4BC47B4156FB08600EA15F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4BC479C156FB08600EA15F7 /* Project object */;
+}
