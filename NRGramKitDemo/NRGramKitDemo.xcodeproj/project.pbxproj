@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C48AAED8156FADC4004324FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48AAED7156FADC4004324FA /* UIKit.framework */; };
+		C48AAEDA156FADC4004324FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48AAED9156FADC4004324FA /* Foundation.framework */; };
+		C48AAEDC156FADC4004324FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48AAEDB156FADC4004324FA /* CoreGraphics.framework */; };
+		C48AAEE2156FADC5004324FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C48AAEE0156FADC5004324FA /* InfoPlist.strings */; };
+		C48AAEE4156FADC5004324FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C48AAEE3156FADC5004324FA /* main.m */; };
+		C48AAEE8156FADC5004324FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C48AAEE7156FADC5004324FA /* AppDelegate.m */; };
+		C48AAEEB156FADC5004324FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48AAEEA156FADC5004324FA /* ViewController.m */; };
+		C48AAEEE156FADC5004324FA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48AAEEC156FADC5004324FA /* ViewController.xib */; };
+		C4BC4824156FB18A00EA15F7 /* libNRGramKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4820156FB17B00EA15F7 /* libNRGramKit.a */; };
+		C4BC4826156FB1A500EA15F7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4825156FB1A500EA15F7 /* Security.framework */; };
+		C4BC4828156FB1AB00EA15F7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4827156FB1AB00EA15F7 /* CFNetwork.framework */; };
+		C4BC482A156FB1B700EA15F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4829156FB1B700EA15F7 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4BC481F156FB17B00EA15F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4BC47A5156FB08600EA15F7;
+			remoteInfo = NRGramKit;
+		};
+		C4BC4822156FB18700EA15F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BC47A4156FB08600EA15F7;
+			remoteInfo = NRGramKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C48AAED3156FADC4004324FA /* NRGramKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRGramKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48AAED7156FADC4004324FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C48AAED9156FADC4004324FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C48AAEDB156FADC4004324FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C48AAEDF156FADC5004324FA /* NRGramKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NRGramKitDemo-Info.plist"; sourceTree = "<group>"; };
+		C48AAEE1156FADC5004324FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C48AAEE3156FADC5004324FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C48AAEE5156FADC5004324FA /* NRGramKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGramKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C48AAEE6156FADC5004324FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C48AAEE7156FADC5004324FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C48AAEE9156FADC5004324FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C48AAEEA156FADC5004324FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C48AAEED156FADC5004324FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NRGramKit.xcodeproj; path = ../NRGramKit.xcodeproj; sourceTree = "<group>"; };
+		C4BC4825156FB1A500EA15F7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C4BC4827156FB1AB00EA15F7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C4BC4829156FB1B700EA15F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C48AAED0156FADC4004324FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BC482A156FB1B700EA15F7 /* SystemConfiguration.framework in Frameworks */,
+				C4BC4828156FB1AB00EA15F7 /* CFNetwork.framework in Frameworks */,
+				C4BC4826156FB1A500EA15F7 /* Security.framework in Frameworks */,
+				C4BC4824156FB18A00EA15F7 /* libNRGramKit.a in Frameworks */,
+				C48AAED8156FADC4004324FA /* UIKit.framework in Frameworks */,
+				C48AAEDA156FADC4004324FA /* Foundation.framework in Frameworks */,
+				C48AAEDC156FADC4004324FA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C48AAEC8156FADC4004324FA = {
+			isa = PBXGroup;
+			children = (
+				C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */,
+				C48AAEDD156FADC4004324FA /* NRGramKitDemo */,
+				C48AAED6156FADC4004324FA /* Frameworks */,
+				C48AAED4156FADC4004324FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C48AAED4156FADC4004324FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C48AAED3156FADC4004324FA /* NRGramKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C48AAED6156FADC4004324FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC4829156FB1B700EA15F7 /* SystemConfiguration.framework */,
+				C4BC4827156FB1AB00EA15F7 /* CFNetwork.framework */,
+				C4BC4825156FB1A500EA15F7 /* Security.framework */,
+				C48AAED7156FADC4004324FA /* UIKit.framework */,
+				C48AAED9156FADC4004324FA /* Foundation.framework */,
+				C48AAEDB156FADC4004324FA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C48AAEDD156FADC4004324FA /* NRGramKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C48AAEE6156FADC5004324FA /* AppDelegate.h */,
+				C48AAEE7156FADC5004324FA /* AppDelegate.m */,
+				C48AAEE9156FADC5004324FA /* ViewController.h */,
+				C48AAEEA156FADC5004324FA /* ViewController.m */,
+				C48AAEEC156FADC5004324FA /* ViewController.xib */,
+				C48AAEDE156FADC5004324FA /* Supporting Files */,
+			);
+			path = NRGramKitDemo;
+			sourceTree = "<group>";
+		};
+		C48AAEDE156FADC5004324FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C48AAEDF156FADC5004324FA /* NRGramKitDemo-Info.plist */,
+				C48AAEE0156FADC5004324FA /* InfoPlist.strings */,
+				C48AAEE3156FADC5004324FA /* main.m */,
+				C48AAEE5156FADC5004324FA /* NRGramKitDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4BC4811156FB17B00EA15F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC4820156FB17B00EA15F7 /* libNRGramKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C48AAED2156FADC4004324FA /* NRGramKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C48AAEF1156FADC5004324FA /* Build configuration list for PBXNativeTarget "NRGramKitDemo" */;
+			buildPhases = (
+				C48AAECF156FADC4004324FA /* Sources */,
+				C48AAED0156FADC4004324FA /* Frameworks */,
+				C48AAED1156FADC4004324FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4BC4823156FB18700EA15F7 /* PBXTargetDependency */,
+			);
+			name = NRGramKitDemo;
+			productName = NRGramKitDemo;
+			productReference = C48AAED3156FADC4004324FA /* NRGramKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C48AAECA156FADC4004324FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = NextRoot;
+			};
+			buildConfigurationList = C48AAECD156FADC4004324FA /* Build configuration list for PBXProject "NRGramKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C48AAEC8156FADC4004324FA;
+			productRefGroup = C48AAED4156FADC4004324FA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C4BC4811156FB17B00EA15F7 /* Products */;
+					ProjectRef = C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C48AAED2156FADC4004324FA /* NRGramKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C4BC4820156FB17B00EA15F7 /* libNRGramKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNRGramKit.a;
+			remoteRef = C4BC481F156FB17B00EA15F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C48AAED1156FADC4004324FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48AAEE2156FADC5004324FA /* InfoPlist.strings in Resources */,
+				C48AAEEE156FADC5004324FA /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C48AAECF156FADC4004324FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48AAEE4156FADC5004324FA /* main.m in Sources */,
+				C48AAEE8156FADC5004324FA /* AppDelegate.m in Sources */,
+				C48AAEEB156FADC5004324FA /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4BC4823156FB18700EA15F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NRGramKit;
+			targetProxy = C4BC4822156FB18700EA15F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C48AAEE0156FADC5004324FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C48AAEE1156FADC5004324FA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C48AAEEC156FADC5004324FA /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C48AAEED156FADC5004324FA /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C48AAEEF156FADC5004324FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C48AAEF0156FADC5004324FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C48AAEF2156FADC5004324FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NRGramKitDemo/NRGramKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "NRGramKitDemo/NRGramKitDemo-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C48AAEF3156FADC5004324FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NRGramKitDemo/NRGramKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "NRGramKitDemo/NRGramKitDemo-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C48AAECD156FADC4004324FA /* Build configuration list for PBXProject "NRGramKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C48AAEEF156FADC5004324FA /* Debug */,
+				C48AAEF0156FADC5004324FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C48AAEF1156FADC5004324FA /* Build configuration list for PBXNativeTarget "NRGramKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C48AAEF2156FADC5004324FA /* Debug */,
+				C48AAEF3156FADC5004324FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C48AAECA156FADC4004324FA /* Project object */;
+}

@@ -7,102 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4061E58156BA8AD001F7DD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4061E57156BA8AD001F7DD6 /* Foundation.framework */; };
-		C4061EAF156BAA7B001F7DD6 /* IGComment.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061E9B156BAA7B001F7DD6 /* IGComment.h */; };
-		C4061EB0156BAA7B001F7DD6 /* IGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061E9C156BAA7B001F7DD6 /* IGComment.m */; };
-		C4061EB1156BAA7B001F7DD6 /* IGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061E9D156BAA7B001F7DD6 /* IGImage.h */; };
-		C4061EB2156BAA7B001F7DD6 /* IGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061E9E156BAA7B001F7DD6 /* IGImage.m */; };
-		C4061EB3156BAA7B001F7DD6 /* IGLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061E9F156BAA7B001F7DD6 /* IGLocation.h */; };
-		C4061EB4156BAA7B001F7DD6 /* IGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA0156BAA7B001F7DD6 /* IGLocation.m */; };
-		C4061EB5156BAA7B001F7DD6 /* IGMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EA1156BAA7B001F7DD6 /* IGMedia.h */; };
-		C4061EB6156BAA7B001F7DD6 /* IGMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA2156BAA7B001F7DD6 /* IGMedia.m */; };
-		C4061EB7156BAA7B001F7DD6 /* IGMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EA3156BAA7B001F7DD6 /* IGMetadata.h */; };
-		C4061EB8156BAA7B001F7DD6 /* IGMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA4156BAA7B001F7DD6 /* IGMetadata.m */; };
-		C4061EB9156BAA7B001F7DD6 /* IGPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EA5156BAA7B001F7DD6 /* IGPagination.h */; };
-		C4061EBA156BAA7B001F7DD6 /* IGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA6156BAA7B001F7DD6 /* IGPagination.m */; };
-		C4061EBB156BAA7B001F7DD6 /* IGSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EA7156BAA7B001F7DD6 /* IGSubscription.h */; };
-		C4061EBC156BAA7B001F7DD6 /* IGSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA8156BAA7B001F7DD6 /* IGSubscription.m */; };
-		C4061EBD156BAA7B001F7DD6 /* IGTag.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EA9156BAA7B001F7DD6 /* IGTag.h */; };
-		C4061EBE156BAA7B001F7DD6 /* IGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EAA156BAA7B001F7DD6 /* IGTag.m */; };
-		C4061EBF156BAA7B001F7DD6 /* IGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EAB156BAA7B001F7DD6 /* IGUser.h */; };
-		C4061EC0156BAA7B001F7DD6 /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EAC156BAA7B001F7DD6 /* IGUser.m */; };
-		C4061EC1156BAA7B001F7DD6 /* Notification.h in Headers */ = {isa = PBXBuildFile; fileRef = C4061EAD156BAA7B001F7DD6 /* Notification.h */; };
-		C4061EC2156BAA7B001F7DD6 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EAE156BAA7B001F7DD6 /* Notification.m */; };
-		C4061EC8156BAACD001F7DD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4061EC7156BAACD001F7DD6 /* UIKit.framework */; };
-		C4695ACD156CD88C00EFA628 /* InstagramLoginDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C4695ACB156CD88C00EFA628 /* InstagramLoginDelegate.h */; };
-		C4695ACE156CD88C00EFA628 /* InstagramLoginDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4695ACC156CD88C00EFA628 /* InstagramLoginDelegate.m */; };
-		C4695ACF156CD88C00EFA628 /* InstagramLoginDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4695ACC156CD88C00EFA628 /* InstagramLoginDelegate.m */; };
-		C4695AD2156CD95900EFA628 /* NRGramKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C4695AD1156CD95900EFA628 /* NRGramKit-Prefix.pch */; };
-		C4A14BDB156BB3F7004E3924 /* NRGramKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A14BD6156BB3F7004E3924 /* NRGramKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4A14BDC156BB3F7004E3924 /* NRGramKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14BD7156BB3F7004E3924 /* NRGramKit.m */; };
-		C4A14BDD156BB3F7004E3924 /* InstagramEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A14BD8156BB3F7004E3924 /* InstagramEngine.h */; };
-		C4A14BDE156BB3F7004E3924 /* InstagramEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14BD9156BB3F7004E3924 /* InstagramEngine.m */; };
-		C4A14BFF156BB700004E3924 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4061EC7156BAACD001F7DD6 /* UIKit.framework */; };
-		C4A14C00156BB700004E3924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4061E57156BA8AD001F7DD6 /* Foundation.framework */; };
-		C4A14C02156BB700004E3924 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A14C01156BB700004E3924 /* CoreGraphics.framework */; };
-		C4A14C08156BB700004E3924 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4A14C06156BB700004E3924 /* InfoPlist.strings */; };
-		C4A14C0A156BB700004E3924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14C09156BB700004E3924 /* main.m */; };
-		C4A14C0E156BB700004E3924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14C0D156BB700004E3924 /* AppDelegate.m */; };
-		C4A14C11156BB700004E3924 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14C10156BB700004E3924 /* ViewController.m */; };
-		C4A14C14156BB700004E3924 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A14C12156BB700004E3924 /* ViewController.xib */; };
-		C4A14C18156BB9FC004E3924 /* NRGramKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14BD7156BB3F7004E3924 /* NRGramKit.m */; };
-		C4A14C19156BBA00004E3924 /* InstagramEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A14BD9156BB3F7004E3924 /* InstagramEngine.m */; };
-		C4A14C1A156BBA1A004E3924 /* IGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061E9C156BAA7B001F7DD6 /* IGComment.m */; };
-		C4A14C1B156BBA1A004E3924 /* IGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061E9E156BAA7B001F7DD6 /* IGImage.m */; };
-		C4A14C1C156BBA1A004E3924 /* IGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA0156BAA7B001F7DD6 /* IGLocation.m */; };
-		C4A14C1D156BBA1A004E3924 /* IGMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA2156BAA7B001F7DD6 /* IGMedia.m */; };
-		C4A14C1E156BBA1A004E3924 /* IGMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA4156BAA7B001F7DD6 /* IGMetadata.m */; };
-		C4A14C1F156BBA1A004E3924 /* IGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA6156BAA7B001F7DD6 /* IGPagination.m */; };
-		C4A14C20156BBA1A004E3924 /* IGSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EA8156BAA7B001F7DD6 /* IGSubscription.m */; };
-		C4A14C21156BBA1A004E3924 /* IGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EAA156BAA7B001F7DD6 /* IGTag.m */; };
-		C4A14C22156BBA1A004E3924 /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EAC156BAA7B001F7DD6 /* IGUser.m */; };
-		C4A14C23156BBA1A004E3924 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = C4061EAE156BAA7B001F7DD6 /* Notification.m */; };
-		C4A14C28156BBAC6004E3924 /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A14BA8156BAF5B004E3924 /* libJSONKit.a */; };
-		C4A14C29156BBAC6004E3924 /* libMKNetworkKit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A14BAB156BAF5B004E3924 /* libMKNetworkKit-iOS.a */; };
-		C4A14C2B156BBAE3004E3924 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A14C2A156BBAE3004E3924 /* Security.framework */; };
-		C4A14C2D156BBAE7004E3924 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A14C2C156BBAE7004E3924 /* SystemConfiguration.framework */; };
-		C4A14C2F156BBAEC004E3924 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A14C2E156BBAEC004E3924 /* CFNetwork.framework */; };
+		C4BC47A9156FB08600EA15F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47A8156FB08600EA15F7 /* Foundation.framework */; };
+		C4BC47AF156FB08600EA15F7 /* NRGramKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47AE156FB08600EA15F7 /* NRGramKit.m */; };
+		C4BC47CA156FB0DF00EA15F7 /* InstagramEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */; };
+		C4BC47CB156FB0DF00EA15F7 /* InstagramEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */; };
+		C4BC47CC156FB0DF00EA15F7 /* InstagramLoginDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */; };
+		C4BC47CD156FB0DF00EA15F7 /* InstagramLoginDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47C9156FB0DF00EA15F7 /* InstagramLoginDelegate.m */; };
+		C4BC47E5156FB13800EA15F7 /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47D7156FB12500EA15F7 /* libJSONKit.a */; };
+		C4BC47E6156FB13800EA15F7 /* libMKNetworkKit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47E0156FB12A00EA15F7 /* libMKNetworkKit-iOS.a */; };
+		C4BC47FC156FB16200EA15F7 /* IGComment.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47E8156FB16200EA15F7 /* IGComment.h */; };
+		C4BC47FD156FB16200EA15F7 /* IGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47E9156FB16200EA15F7 /* IGComment.m */; };
+		C4BC47FE156FB16200EA15F7 /* IGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47EA156FB16200EA15F7 /* IGImage.h */; };
+		C4BC47FF156FB16200EA15F7 /* IGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47EB156FB16200EA15F7 /* IGImage.m */; };
+		C4BC4800156FB16200EA15F7 /* IGLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47EC156FB16200EA15F7 /* IGLocation.h */; };
+		C4BC4801156FB16200EA15F7 /* IGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47ED156FB16200EA15F7 /* IGLocation.m */; };
+		C4BC4802156FB16200EA15F7 /* IGMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47EE156FB16200EA15F7 /* IGMedia.h */; };
+		C4BC4803156FB16200EA15F7 /* IGMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47EF156FB16200EA15F7 /* IGMedia.m */; };
+		C4BC4804156FB16200EA15F7 /* IGMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F0156FB16200EA15F7 /* IGMetadata.h */; };
+		C4BC4805156FB16200EA15F7 /* IGMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F1156FB16200EA15F7 /* IGMetadata.m */; };
+		C4BC4806156FB16200EA15F7 /* IGPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F2156FB16200EA15F7 /* IGPagination.h */; };
+		C4BC4807156FB16200EA15F7 /* IGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F3156FB16200EA15F7 /* IGPagination.m */; };
+		C4BC4808156FB16200EA15F7 /* IGSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F4156FB16200EA15F7 /* IGSubscription.h */; };
+		C4BC4809156FB16200EA15F7 /* IGSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F5156FB16200EA15F7 /* IGSubscription.m */; };
+		C4BC480A156FB16200EA15F7 /* IGTag.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F6156FB16200EA15F7 /* IGTag.h */; };
+		C4BC480B156FB16200EA15F7 /* IGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F7156FB16200EA15F7 /* IGTag.m */; };
+		C4BC480C156FB16200EA15F7 /* IGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47F8156FB16200EA15F7 /* IGUser.h */; };
+		C4BC480D156FB16200EA15F7 /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F9156FB16200EA15F7 /* IGUser.m */; };
+		C4BC480E156FB16200EA15F7 /* Notification.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47FA156FB16200EA15F7 /* Notification.h */; };
+		C4BC480F156FB16200EA15F7 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47FB156FB16200EA15F7 /* Notification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C4A14BA7156BAF5B004E3924 /* PBXContainerItemProxy */ = {
+		C4BC47D6156FB12500EA15F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C4A14BA0156BAF5B004E3924 /* JSONKit.xcodeproj */;
+			containerPortal = C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 63B3F6851563FD34009C6158;
 			remoteInfo = JSONKit;
 		};
-		C4A14BAA156BAF5B004E3924 /* PBXContainerItemProxy */ = {
+		C4BC47DF156FB12A00EA15F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C4A14BA1156BAF5B004E3924 /* MKNetworkKit-iOS.xcodeproj */;
+			containerPortal = C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABB5C25C148B3AE00056D3E9;
 			remoteInfo = "MKNetworkKit-iOS";
 		};
-		C4A14BAC156BAF63004E3924 /* PBXContainerItemProxy */ = {
+		C4BC47E1156FB13300EA15F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C4A14BA0156BAF5B004E3924 /* JSONKit.xcodeproj */;
+			containerPortal = C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 63B3F6841563FD34009C6158;
 			remoteInfo = JSONKit;
 		};
-		C4A14BAE156BAF63004E3924 /* PBXContainerItemProxy */ = {
+		C4BC47E3156FB13300EA15F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C4A14BA1156BAF5B004E3924 /* MKNetworkKit-iOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = ABB5C25B148B3AE00056D3E9;
-			remoteInfo = "MKNetworkKit-iOS";
-		};
-		C4A14C24156BBABD004E3924 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4A14BA0156BAF5B004E3924 /* JSONKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 63B3F6841563FD34009C6158;
-			remoteInfo = JSONKit;
-		};
-		C4A14C26156BBABD004E3924 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4A14BA1156BAF5B004E3924 /* MKNetworkKit-iOS.xcodeproj */;
+			containerPortal = C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = ABB5C25B148B3AE00056D3E9;
 			remoteInfo = "MKNetworkKit-iOS";
@@ -110,436 +69,281 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C4061E54156BA8AD001F7DD6 /* libNRGramKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNRGramKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4061E57156BA8AD001F7DD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C4061E9B156BAA7B001F7DD6 /* IGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGComment.h; sourceTree = "<group>"; };
-		C4061E9C156BAA7B001F7DD6 /* IGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGComment.m; sourceTree = "<group>"; };
-		C4061E9D156BAA7B001F7DD6 /* IGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGImage.h; sourceTree = "<group>"; };
-		C4061E9E156BAA7B001F7DD6 /* IGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGImage.m; sourceTree = "<group>"; };
-		C4061E9F156BAA7B001F7DD6 /* IGLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLocation.h; sourceTree = "<group>"; };
-		C4061EA0156BAA7B001F7DD6 /* IGLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLocation.m; sourceTree = "<group>"; };
-		C4061EA1156BAA7B001F7DD6 /* IGMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGMedia.h; sourceTree = "<group>"; };
-		C4061EA2156BAA7B001F7DD6 /* IGMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGMedia.m; sourceTree = "<group>"; };
-		C4061EA3156BAA7B001F7DD6 /* IGMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGMetadata.h; sourceTree = "<group>"; };
-		C4061EA4156BAA7B001F7DD6 /* IGMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGMetadata.m; sourceTree = "<group>"; };
-		C4061EA5156BAA7B001F7DD6 /* IGPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGPagination.h; sourceTree = "<group>"; };
-		C4061EA6156BAA7B001F7DD6 /* IGPagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGPagination.m; sourceTree = "<group>"; };
-		C4061EA7156BAA7B001F7DD6 /* IGSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGSubscription.h; sourceTree = "<group>"; };
-		C4061EA8156BAA7B001F7DD6 /* IGSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGSubscription.m; sourceTree = "<group>"; };
-		C4061EA9156BAA7B001F7DD6 /* IGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTag.h; sourceTree = "<group>"; };
-		C4061EAA156BAA7B001F7DD6 /* IGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTag.m; sourceTree = "<group>"; };
-		C4061EAB156BAA7B001F7DD6 /* IGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGUser.h; sourceTree = "<group>"; };
-		C4061EAC156BAA7B001F7DD6 /* IGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUser.m; sourceTree = "<group>"; };
-		C4061EAD156BAA7B001F7DD6 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
-		C4061EAE156BAA7B001F7DD6 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
-		C4061EC7156BAACD001F7DD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		C4695ACB156CD88C00EFA628 /* InstagramLoginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginDelegate.h; sourceTree = "<group>"; };
-		C4695ACC156CD88C00EFA628 /* InstagramLoginDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginDelegate.m; sourceTree = "<group>"; };
-		C4695AD1156CD95900EFA628 /* NRGramKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NRGramKit-Prefix.pch"; path = "NRGramKit/NRGramKit-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		C4A14BA0156BAF5B004E3924 /* JSONKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONKit.xcodeproj; path = ../JSONKit/JSONKit/JSONKit.xcodeproj; sourceTree = "<group>"; };
-		C4A14BA1156BAF5B004E3924 /* MKNetworkKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "MKNetworkKit-iOS.xcodeproj"; path = "../MKNetworkKit/MKNetworkKit-iOS/MKNetworkKit-iOS.xcodeproj"; sourceTree = "<group>"; };
-		C4A14BD6156BB3F7004E3924 /* NRGramKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRGramKit.h; sourceTree = "<group>"; };
-		C4A14BD7156BB3F7004E3924 /* NRGramKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRGramKit.m; sourceTree = "<group>"; };
-		C4A14BD8156BB3F7004E3924 /* InstagramEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramEngine.h; sourceTree = "<group>"; };
-		C4A14BD9156BB3F7004E3924 /* InstagramEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramEngine.m; sourceTree = "<group>"; };
-		C4A14BFD156BB700004E3924 /* NRGramKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRGramKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4A14C01156BB700004E3924 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C4A14C05156BB700004E3924 /* NRGramKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NRGramKitDemo-Info.plist"; sourceTree = "<group>"; };
-		C4A14C07156BB700004E3924 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C4A14C09156BB700004E3924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C4A14C0B156BB700004E3924 /* NRGramKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGramKitDemo-Prefix.pch"; sourceTree = "<group>"; };
-		C4A14C0C156BB700004E3924 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C4A14C0D156BB700004E3924 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4A14C0F156BB700004E3924 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C4A14C10156BB700004E3924 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C4A14C13156BB700004E3924 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		C4A14C2A156BBAE3004E3924 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C4A14C2C156BBAE7004E3924 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C4A14C2E156BBAEC004E3924 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNRGramKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BC47A8156FB08600EA15F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C4BC47AC156FB08600EA15F7 /* NRGramKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGramKit-Prefix.pch"; sourceTree = "<group>"; };
+		C4BC47AD156FB08600EA15F7 /* NRGramKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRGramKit.h; sourceTree = "<group>"; };
+		C4BC47AE156FB08600EA15F7 /* NRGramKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRGramKit.m; sourceTree = "<group>"; };
+		C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramEngine.h; sourceTree = "<group>"; };
+		C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramEngine.m; sourceTree = "<group>"; };
+		C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginDelegate.h; sourceTree = "<group>"; };
+		C4BC47C9156FB0DF00EA15F7 /* InstagramLoginDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginDelegate.m; sourceTree = "<group>"; };
+		C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONKit.xcodeproj; path = External/JSONKit/JSONKit/JSONKit.xcodeproj; sourceTree = "<group>"; };
+		C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "MKNetworkKit-iOS.xcodeproj"; path = "External/MKNetworkKit/MKNetworkKit-iOS/MKNetworkKit-iOS.xcodeproj"; sourceTree = "<group>"; };
+		C4BC47E8156FB16200EA15F7 /* IGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGComment.h; sourceTree = "<group>"; };
+		C4BC47E9156FB16200EA15F7 /* IGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGComment.m; sourceTree = "<group>"; };
+		C4BC47EA156FB16200EA15F7 /* IGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGImage.h; sourceTree = "<group>"; };
+		C4BC47EB156FB16200EA15F7 /* IGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGImage.m; sourceTree = "<group>"; };
+		C4BC47EC156FB16200EA15F7 /* IGLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLocation.h; sourceTree = "<group>"; };
+		C4BC47ED156FB16200EA15F7 /* IGLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLocation.m; sourceTree = "<group>"; };
+		C4BC47EE156FB16200EA15F7 /* IGMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGMedia.h; sourceTree = "<group>"; };
+		C4BC47EF156FB16200EA15F7 /* IGMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGMedia.m; sourceTree = "<group>"; };
+		C4BC47F0156FB16200EA15F7 /* IGMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGMetadata.h; sourceTree = "<group>"; };
+		C4BC47F1156FB16200EA15F7 /* IGMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGMetadata.m; sourceTree = "<group>"; };
+		C4BC47F2156FB16200EA15F7 /* IGPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGPagination.h; sourceTree = "<group>"; };
+		C4BC47F3156FB16200EA15F7 /* IGPagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGPagination.m; sourceTree = "<group>"; };
+		C4BC47F4156FB16200EA15F7 /* IGSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGSubscription.h; sourceTree = "<group>"; };
+		C4BC47F5156FB16200EA15F7 /* IGSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGSubscription.m; sourceTree = "<group>"; };
+		C4BC47F6156FB16200EA15F7 /* IGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGTag.h; sourceTree = "<group>"; };
+		C4BC47F7156FB16200EA15F7 /* IGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGTag.m; sourceTree = "<group>"; };
+		C4BC47F8156FB16200EA15F7 /* IGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGUser.h; sourceTree = "<group>"; };
+		C4BC47F9156FB16200EA15F7 /* IGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUser.m; sourceTree = "<group>"; };
+		C4BC47FA156FB16200EA15F7 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
+		C4BC47FB156FB16200EA15F7 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C4061E51156BA8AD001F7DD6 /* Frameworks */ = {
+		C4BC47A2156FB08600EA15F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4061EC8156BAACD001F7DD6 /* UIKit.framework in Frameworks */,
-				C4061E58156BA8AD001F7DD6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4A14BFA156BB700004E3924 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4A14C2F156BBAEC004E3924 /* CFNetwork.framework in Frameworks */,
-				C4A14C2D156BBAE7004E3924 /* SystemConfiguration.framework in Frameworks */,
-				C4A14C2B156BBAE3004E3924 /* Security.framework in Frameworks */,
-				C4A14C28156BBAC6004E3924 /* libJSONKit.a in Frameworks */,
-				C4A14C29156BBAC6004E3924 /* libMKNetworkKit-iOS.a in Frameworks */,
-				C4A14BFF156BB700004E3924 /* UIKit.framework in Frameworks */,
-				C4A14C00156BB700004E3924 /* Foundation.framework in Frameworks */,
-				C4A14C02156BB700004E3924 /* CoreGraphics.framework in Frameworks */,
+				C4BC47E5156FB13800EA15F7 /* libJSONKit.a in Frameworks */,
+				C4BC47E6156FB13800EA15F7 /* libMKNetworkKit-iOS.a in Frameworks */,
+				C4BC47A9156FB08600EA15F7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C4061E49156BA8AD001F7DD6 = {
+		C4BC479A156FB08600EA15F7 = {
 			isa = PBXGroup;
 			children = (
-				C4A14BA0156BAF5B004E3924 /* JSONKit.xcodeproj */,
-				C4A14BA1156BAF5B004E3924 /* MKNetworkKit-iOS.xcodeproj */,
-				C4061E59156BA8AD001F7DD6 /* GramKit */,
-				C4A14C03156BB700004E3924 /* NRGramKitDemo */,
-				C4061E56156BA8AD001F7DD6 /* Frameworks */,
-				C4061E55156BA8AD001F7DD6 /* Products */,
+				C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */,
+				C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */,
+				C4BC47AA156FB08600EA15F7 /* NRGramKit */,
+				C4BC47A7156FB08600EA15F7 /* Frameworks */,
+				C4BC47A6156FB08600EA15F7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C4061E55156BA8AD001F7DD6 /* Products */ = {
+		C4BC47A6156FB08600EA15F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4061E54156BA8AD001F7DD6 /* libNRGramKit.a */,
-				C4A14BFD156BB700004E3924 /* NRGramKitDemo.app */,
+				C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4061E56156BA8AD001F7DD6 /* Frameworks */ = {
+		C4BC47A7156FB08600EA15F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C4A14C2E156BBAEC004E3924 /* CFNetwork.framework */,
-				C4A14C2C156BBAE7004E3924 /* SystemConfiguration.framework */,
-				C4A14C2A156BBAE3004E3924 /* Security.framework */,
-				C4061EC7156BAACD001F7DD6 /* UIKit.framework */,
-				C4061E57156BA8AD001F7DD6 /* Foundation.framework */,
-				C4A14C01156BB700004E3924 /* CoreGraphics.framework */,
+				C4BC47A8156FB08600EA15F7 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C4061E59156BA8AD001F7DD6 /* GramKit */ = {
+		C4BC47AA156FB08600EA15F7 /* NRGramKit */ = {
 			isa = PBXGroup;
 			children = (
-				C4A14BD5156BB3F7004E3924 /* NRGramKit */,
-				C4061E9A156BAA7B001F7DD6 /* Model */,
-				C4061E5A156BA8AD001F7DD6 /* Supporting Files */,
-			);
-			name = GramKit;
-			path = NRInstagramKit;
-			sourceTree = "<group>";
-		};
-		C4061E5A156BA8AD001F7DD6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C4695AD1156CD95900EFA628 /* NRGramKit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C4061E9A156BAA7B001F7DD6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C4061E9B156BAA7B001F7DD6 /* IGComment.h */,
-				C4061E9C156BAA7B001F7DD6 /* IGComment.m */,
-				C4061E9D156BAA7B001F7DD6 /* IGImage.h */,
-				C4061E9E156BAA7B001F7DD6 /* IGImage.m */,
-				C4061E9F156BAA7B001F7DD6 /* IGLocation.h */,
-				C4061EA0156BAA7B001F7DD6 /* IGLocation.m */,
-				C4061EA1156BAA7B001F7DD6 /* IGMedia.h */,
-				C4061EA2156BAA7B001F7DD6 /* IGMedia.m */,
-				C4061EA3156BAA7B001F7DD6 /* IGMetadata.h */,
-				C4061EA4156BAA7B001F7DD6 /* IGMetadata.m */,
-				C4061EA5156BAA7B001F7DD6 /* IGPagination.h */,
-				C4061EA6156BAA7B001F7DD6 /* IGPagination.m */,
-				C4061EA7156BAA7B001F7DD6 /* IGSubscription.h */,
-				C4061EA8156BAA7B001F7DD6 /* IGSubscription.m */,
-				C4061EA9156BAA7B001F7DD6 /* IGTag.h */,
-				C4061EAA156BAA7B001F7DD6 /* IGTag.m */,
-				C4061EAB156BAA7B001F7DD6 /* IGUser.h */,
-				C4061EAC156BAA7B001F7DD6 /* IGUser.m */,
-				C4061EAD156BAA7B001F7DD6 /* Notification.h */,
-				C4061EAE156BAA7B001F7DD6 /* Notification.m */,
-			);
-			path = Model;
-			sourceTree = SOURCE_ROOT;
-		};
-		C4A14BA2156BAF5B004E3924 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C4A14BA8156BAF5B004E3924 /* libJSONKit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C4A14BA4156BAF5B004E3924 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C4A14BAB156BAF5B004E3924 /* libMKNetworkKit-iOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C4A14BD5156BB3F7004E3924 /* NRGramKit */ = {
-			isa = PBXGroup;
-			children = (
-				C4A14BD6156BB3F7004E3924 /* NRGramKit.h */,
-				C4A14BD7156BB3F7004E3924 /* NRGramKit.m */,
-				C4A14BD8156BB3F7004E3924 /* InstagramEngine.h */,
-				C4A14BD9156BB3F7004E3924 /* InstagramEngine.m */,
-				C4695ACB156CD88C00EFA628 /* InstagramLoginDelegate.h */,
-				C4695ACC156CD88C00EFA628 /* InstagramLoginDelegate.m */,
+				C4BC47AD156FB08600EA15F7 /* NRGramKit.h */,
+				C4BC47AE156FB08600EA15F7 /* NRGramKit.m */,
+				C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */,
+				C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */,
+				C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */,
+				C4BC47C9156FB0DF00EA15F7 /* InstagramLoginDelegate.m */,
+				C4BC47E7156FB16200EA15F7 /* Model */,
+				C4BC47AB156FB08600EA15F7 /* Supporting Files */,
 			);
 			path = NRGramKit;
-			sourceTree = SOURCE_ROOT;
-		};
-		C4A14C03156BB700004E3924 /* NRGramKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				C4A14C0C156BB700004E3924 /* AppDelegate.h */,
-				C4A14C0D156BB700004E3924 /* AppDelegate.m */,
-				C4A14C0F156BB700004E3924 /* ViewController.h */,
-				C4A14C10156BB700004E3924 /* ViewController.m */,
-				C4A14C12156BB700004E3924 /* ViewController.xib */,
-				C4A14C04156BB700004E3924 /* Supporting Files */,
-			);
-			path = NRGramKitDemo;
 			sourceTree = "<group>";
 		};
-		C4A14C04156BB700004E3924 /* Supporting Files */ = {
+		C4BC47AB156FB08600EA15F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4A14C05156BB700004E3924 /* NRGramKitDemo-Info.plist */,
-				C4A14C06156BB700004E3924 /* InfoPlist.strings */,
-				C4A14C09156BB700004E3924 /* main.m */,
-				C4A14C0B156BB700004E3924 /* NRGramKitDemo-Prefix.pch */,
+				C4BC47AC156FB08600EA15F7 /* NRGramKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4BC47D0156FB12500EA15F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47D7156FB12500EA15F7 /* libJSONKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BC47D9156FB12A00EA15F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47E0156FB12A00EA15F7 /* libMKNetworkKit-iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BC47E7156FB16200EA15F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4BC47E8156FB16200EA15F7 /* IGComment.h */,
+				C4BC47E9156FB16200EA15F7 /* IGComment.m */,
+				C4BC47EA156FB16200EA15F7 /* IGImage.h */,
+				C4BC47EB156FB16200EA15F7 /* IGImage.m */,
+				C4BC47EC156FB16200EA15F7 /* IGLocation.h */,
+				C4BC47ED156FB16200EA15F7 /* IGLocation.m */,
+				C4BC47EE156FB16200EA15F7 /* IGMedia.h */,
+				C4BC47EF156FB16200EA15F7 /* IGMedia.m */,
+				C4BC47F0156FB16200EA15F7 /* IGMetadata.h */,
+				C4BC47F1156FB16200EA15F7 /* IGMetadata.m */,
+				C4BC47F2156FB16200EA15F7 /* IGPagination.h */,
+				C4BC47F3156FB16200EA15F7 /* IGPagination.m */,
+				C4BC47F4156FB16200EA15F7 /* IGSubscription.h */,
+				C4BC47F5156FB16200EA15F7 /* IGSubscription.m */,
+				C4BC47F6156FB16200EA15F7 /* IGTag.h */,
+				C4BC47F7156FB16200EA15F7 /* IGTag.m */,
+				C4BC47F8156FB16200EA15F7 /* IGUser.h */,
+				C4BC47F9156FB16200EA15F7 /* IGUser.m */,
+				C4BC47FA156FB16200EA15F7 /* Notification.h */,
+				C4BC47FB156FB16200EA15F7 /* Notification.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C4061E52156BA8AD001F7DD6 /* Headers */ = {
+		C4BC47A3156FB08600EA15F7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4061EAF156BAA7B001F7DD6 /* IGComment.h in Headers */,
-				C4061EB1156BAA7B001F7DD6 /* IGImage.h in Headers */,
-				C4061EB3156BAA7B001F7DD6 /* IGLocation.h in Headers */,
-				C4061EB5156BAA7B001F7DD6 /* IGMedia.h in Headers */,
-				C4061EB7156BAA7B001F7DD6 /* IGMetadata.h in Headers */,
-				C4061EB9156BAA7B001F7DD6 /* IGPagination.h in Headers */,
-				C4061EBB156BAA7B001F7DD6 /* IGSubscription.h in Headers */,
-				C4061EBD156BAA7B001F7DD6 /* IGTag.h in Headers */,
-				C4061EBF156BAA7B001F7DD6 /* IGUser.h in Headers */,
-				C4061EC1156BAA7B001F7DD6 /* Notification.h in Headers */,
-				C4A14BDB156BB3F7004E3924 /* NRGramKit.h in Headers */,
-				C4A14BDD156BB3F7004E3924 /* InstagramEngine.h in Headers */,
-				C4695ACD156CD88C00EFA628 /* InstagramLoginDelegate.h in Headers */,
-				C4695AD2156CD95900EFA628 /* NRGramKit-Prefix.pch in Headers */,
+				C4BC47CA156FB0DF00EA15F7 /* InstagramEngine.h in Headers */,
+				C4BC47CC156FB0DF00EA15F7 /* InstagramLoginDelegate.h in Headers */,
+				C4BC47FC156FB16200EA15F7 /* IGComment.h in Headers */,
+				C4BC47FE156FB16200EA15F7 /* IGImage.h in Headers */,
+				C4BC4800156FB16200EA15F7 /* IGLocation.h in Headers */,
+				C4BC4802156FB16200EA15F7 /* IGMedia.h in Headers */,
+				C4BC4804156FB16200EA15F7 /* IGMetadata.h in Headers */,
+				C4BC4806156FB16200EA15F7 /* IGPagination.h in Headers */,
+				C4BC4808156FB16200EA15F7 /* IGSubscription.h in Headers */,
+				C4BC480A156FB16200EA15F7 /* IGTag.h in Headers */,
+				C4BC480C156FB16200EA15F7 /* IGUser.h in Headers */,
+				C4BC480E156FB16200EA15F7 /* Notification.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C4061E53156BA8AD001F7DD6 /* NRGramKit */ = {
+		C4BC47A4156FB08600EA15F7 /* NRGramKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4061E61156BA8AD001F7DD6 /* Build configuration list for PBXNativeTarget "NRGramKit" */;
+			buildConfigurationList = C4BC47B2156FB08600EA15F7 /* Build configuration list for PBXNativeTarget "NRGramKit" */;
 			buildPhases = (
-				C4061E50156BA8AD001F7DD6 /* Sources */,
-				C4061E51156BA8AD001F7DD6 /* Frameworks */,
-				C4061E52156BA8AD001F7DD6 /* Headers */,
+				C4BC47A1156FB08600EA15F7 /* Sources */,
+				C4BC47A2156FB08600EA15F7 /* Frameworks */,
+				C4BC47A3156FB08600EA15F7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C4A14BAD156BAF63004E3924 /* PBXTargetDependency */,
-				C4A14BAF156BAF63004E3924 /* PBXTargetDependency */,
+				C4BC47E2156FB13300EA15F7 /* PBXTargetDependency */,
+				C4BC47E4156FB13300EA15F7 /* PBXTargetDependency */,
 			);
 			name = NRGramKit;
-			productName = NRInstagramKit;
-			productReference = C4061E54156BA8AD001F7DD6 /* libNRGramKit.a */;
+			productName = NRGramKit;
+			productReference = C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		C4A14BFC156BB700004E3924 /* NRGramKitDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C4A14C15156BB700004E3924 /* Build configuration list for PBXNativeTarget "NRGramKitDemo" */;
-			buildPhases = (
-				C4A14BF9156BB700004E3924 /* Sources */,
-				C4A14BFA156BB700004E3924 /* Frameworks */,
-				C4A14BFB156BB700004E3924 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C4A14C25156BBABD004E3924 /* PBXTargetDependency */,
-				C4A14C27156BBABD004E3924 /* PBXTargetDependency */,
-			);
-			name = NRGramKitDemo;
-			productName = NRGramKitDemo;
-			productReference = C4A14BFD156BB700004E3924 /* NRGramKitDemo.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C4061E4B156BA8AD001F7DD6 /* Project object */ = {
+		C4BC479C156FB08600EA15F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = NextRoot;
 			};
-			buildConfigurationList = C4061E4E156BA8AD001F7DD6 /* Build configuration list for PBXProject "NRGramKit" */;
+			buildConfigurationList = C4BC479F156FB08600EA15F7 /* Build configuration list for PBXProject "NRGramKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C4061E49156BA8AD001F7DD6;
-			productRefGroup = C4061E55156BA8AD001F7DD6 /* Products */;
+			mainGroup = C4BC479A156FB08600EA15F7;
+			productRefGroup = C4BC47A6156FB08600EA15F7 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C4A14BA2156BAF5B004E3924 /* Products */;
-					ProjectRef = C4A14BA0156BAF5B004E3924 /* JSONKit.xcodeproj */;
+					ProductGroup = C4BC47D0156FB12500EA15F7 /* Products */;
+					ProjectRef = C4BC47CF156FB12500EA15F7 /* JSONKit.xcodeproj */;
 				},
 				{
-					ProductGroup = C4A14BA4156BAF5B004E3924 /* Products */;
-					ProjectRef = C4A14BA1156BAF5B004E3924 /* MKNetworkKit-iOS.xcodeproj */;
+					ProductGroup = C4BC47D9156FB12A00EA15F7 /* Products */;
+					ProjectRef = C4BC47D8156FB12A00EA15F7 /* MKNetworkKit-iOS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				C4061E53156BA8AD001F7DD6 /* NRGramKit */,
-				C4A14BFC156BB700004E3924 /* NRGramKitDemo */,
+				C4BC47A4156FB08600EA15F7 /* NRGramKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C4A14BA8156BAF5B004E3924 /* libJSONKit.a */ = {
+		C4BC47D7156FB12500EA15F7 /* libJSONKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libJSONKit.a;
-			remoteRef = C4A14BA7156BAF5B004E3924 /* PBXContainerItemProxy */;
+			remoteRef = C4BC47D6156FB12500EA15F7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C4A14BAB156BAF5B004E3924 /* libMKNetworkKit-iOS.a */ = {
+		C4BC47E0156FB12A00EA15F7 /* libMKNetworkKit-iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libMKNetworkKit-iOS.a";
-			remoteRef = C4A14BAA156BAF5B004E3924 /* PBXContainerItemProxy */;
+			remoteRef = C4BC47DF156FB12A00EA15F7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXResourcesBuildPhase section */
-		C4A14BFB156BB700004E3924 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4A14C08156BB700004E3924 /* InfoPlist.strings in Resources */,
-				C4A14C14156BB700004E3924 /* ViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		C4061E50156BA8AD001F7DD6 /* Sources */ = {
+		C4BC47A1156FB08600EA15F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4061EB0156BAA7B001F7DD6 /* IGComment.m in Sources */,
-				C4061EB2156BAA7B001F7DD6 /* IGImage.m in Sources */,
-				C4061EB4156BAA7B001F7DD6 /* IGLocation.m in Sources */,
-				C4061EB6156BAA7B001F7DD6 /* IGMedia.m in Sources */,
-				C4061EB8156BAA7B001F7DD6 /* IGMetadata.m in Sources */,
-				C4061EBA156BAA7B001F7DD6 /* IGPagination.m in Sources */,
-				C4061EBC156BAA7B001F7DD6 /* IGSubscription.m in Sources */,
-				C4061EBE156BAA7B001F7DD6 /* IGTag.m in Sources */,
-				C4061EC0156BAA7B001F7DD6 /* IGUser.m in Sources */,
-				C4061EC2156BAA7B001F7DD6 /* Notification.m in Sources */,
-				C4A14BDC156BB3F7004E3924 /* NRGramKit.m in Sources */,
-				C4A14BDE156BB3F7004E3924 /* InstagramEngine.m in Sources */,
-				C4695ACE156CD88C00EFA628 /* InstagramLoginDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4A14BF9156BB700004E3924 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4A14C0A156BB700004E3924 /* main.m in Sources */,
-				C4A14C0E156BB700004E3924 /* AppDelegate.m in Sources */,
-				C4A14C11156BB700004E3924 /* ViewController.m in Sources */,
-				C4A14C18156BB9FC004E3924 /* NRGramKit.m in Sources */,
-				C4A14C19156BBA00004E3924 /* InstagramEngine.m in Sources */,
-				C4A14C1A156BBA1A004E3924 /* IGComment.m in Sources */,
-				C4A14C1B156BBA1A004E3924 /* IGImage.m in Sources */,
-				C4A14C1C156BBA1A004E3924 /* IGLocation.m in Sources */,
-				C4A14C1D156BBA1A004E3924 /* IGMedia.m in Sources */,
-				C4A14C1E156BBA1A004E3924 /* IGMetadata.m in Sources */,
-				C4A14C1F156BBA1A004E3924 /* IGPagination.m in Sources */,
-				C4A14C20156BBA1A004E3924 /* IGSubscription.m in Sources */,
-				C4A14C21156BBA1A004E3924 /* IGTag.m in Sources */,
-				C4A14C22156BBA1A004E3924 /* IGUser.m in Sources */,
-				C4A14C23156BBA1A004E3924 /* Notification.m in Sources */,
-				C4695ACF156CD88C00EFA628 /* InstagramLoginDelegate.m in Sources */,
+				C4BC47AF156FB08600EA15F7 /* NRGramKit.m in Sources */,
+				C4BC47CB156FB0DF00EA15F7 /* InstagramEngine.m in Sources */,
+				C4BC47CD156FB0DF00EA15F7 /* InstagramLoginDelegate.m in Sources */,
+				C4BC47FD156FB16200EA15F7 /* IGComment.m in Sources */,
+				C4BC47FF156FB16200EA15F7 /* IGImage.m in Sources */,
+				C4BC4801156FB16200EA15F7 /* IGLocation.m in Sources */,
+				C4BC4803156FB16200EA15F7 /* IGMedia.m in Sources */,
+				C4BC4805156FB16200EA15F7 /* IGMetadata.m in Sources */,
+				C4BC4807156FB16200EA15F7 /* IGPagination.m in Sources */,
+				C4BC4809156FB16200EA15F7 /* IGSubscription.m in Sources */,
+				C4BC480B156FB16200EA15F7 /* IGTag.m in Sources */,
+				C4BC480D156FB16200EA15F7 /* IGUser.m in Sources */,
+				C4BC480F156FB16200EA15F7 /* Notification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C4A14BAD156BAF63004E3924 /* PBXTargetDependency */ = {
+		C4BC47E2156FB13300EA15F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JSONKit;
-			targetProxy = C4A14BAC156BAF63004E3924 /* PBXContainerItemProxy */;
+			targetProxy = C4BC47E1156FB13300EA15F7 /* PBXContainerItemProxy */;
 		};
-		C4A14BAF156BAF63004E3924 /* PBXTargetDependency */ = {
+		C4BC47E4156FB13300EA15F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "MKNetworkKit-iOS";
-			targetProxy = C4A14BAE156BAF63004E3924 /* PBXContainerItemProxy */;
-		};
-		C4A14C25156BBABD004E3924 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JSONKit;
-			targetProxy = C4A14C24156BBABD004E3924 /* PBXContainerItemProxy */;
-		};
-		C4A14C27156BBABD004E3924 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "MKNetworkKit-iOS";
-			targetProxy = C4A14C26156BBABD004E3924 /* PBXContainerItemProxy */;
+			targetProxy = C4BC47E3156FB13300EA15F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		C4A14C06156BB700004E3924 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4A14C07156BB700004E3924 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C4A14C12156BB700004E3924 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4A14C13156BB700004E3924 /* en */,
-			);
-			name = ViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		C4061E5F156BA8AD001F7DD6 /* Debug */ = {
+		C4BC47B0156FB08600EA15F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -563,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		C4061E60156BA8AD001F7DD6 /* Release */ = {
+		C4BC47B1156FB08600EA15F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -581,110 +385,60 @@
 			};
 			name = Release;
 		};
-		C4061E62156BA8AD001F7DD6 /* Debug */ = {
+		C4BC47B3156FB08600EA15F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/NRGramKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRGramKit/NRGramKit-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Instamap-bjbefqskowoqhxeezqnxqudqxznb/Build/Products/Debug-iphoneos\"",
-				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "../**";
+				USER_HEADER_SEARCH_PATHS = "External/**";
 			};
 			name = Debug;
 		};
-		C4061E63156BA8AD001F7DD6 /* Release */ = {
+		C4BC47B4156FB08600EA15F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/NRGramKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRGramKit/NRGramKit-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Instamap-bjbefqskowoqhxeezqnxqudqxznb/Build/Products/Debug-iphoneos\"",
-				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "../**";
-			};
-			name = Release;
-		};
-		C4A14C16156BB700004E3924 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NRGramKitDemo/NRGramKitDemo-Prefix.pch";
-				INFOPLIST_FILE = "NRGramKitDemo/NRGramKitDemo-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../** External/** ../**";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		C4A14C17156BB700004E3924 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NRGramKitDemo/NRGramKitDemo-Prefix.pch";
-				INFOPLIST_FILE = "NRGramKitDemo/NRGramKitDemo-Info.plist";
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../** External/** ../**";
-				WRAPPER_EXTENSION = app;
+				USER_HEADER_SEARCH_PATHS = "External/**";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C4061E4E156BA8AD001F7DD6 /* Build configuration list for PBXProject "NRGramKit" */ = {
+		C4BC479F156FB08600EA15F7 /* Build configuration list for PBXProject "NRGramKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4061E5F156BA8AD001F7DD6 /* Debug */,
-				C4061E60156BA8AD001F7DD6 /* Release */,
+				C4BC47B0156FB08600EA15F7 /* Debug */,
+				C4BC47B1156FB08600EA15F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4061E61156BA8AD001F7DD6 /* Build configuration list for PBXNativeTarget "NRGramKit" */ = {
+		C4BC47B2156FB08600EA15F7 /* Build configuration list for PBXNativeTarget "NRGramKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4061E62156BA8AD001F7DD6 /* Debug */,
-				C4061E63156BA8AD001F7DD6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C4A14C15156BB700004E3924 /* Build configuration list for PBXNativeTarget "NRGramKitDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4A14C16156BB700004E3924 /* Debug */,
-				C4A14C17156BB700004E3924 /* Release */,
+				C4BC47B3156FB08600EA15F7 /* Debug */,
+				C4BC47B4156FB08600EA15F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C4061E4B156BA8AD001F7DD6 /* Project object */;
+	rootObject = C4BC479C156FB08600EA15F7 /* Project object */;
 }
