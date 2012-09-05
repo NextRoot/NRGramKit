@@ -16,7 +16,7 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString* host = [[request URL] host];
-    if([host rangeOfString:@"api.instamapapp.com"].location!=NSNotFound)
+    if([host rangeOfString:@"www.slickflick.com"].location!=NSNotFound)
     {
         NSString* frag = [[request URL] fragment];
         NSMutableDictionary*dict = [self parseQueryString:frag];

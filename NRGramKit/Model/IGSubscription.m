@@ -70,7 +70,7 @@
 - (NSMutableArray *)currentMedia
 {
     NSMutableArray* arr = nil;
-    NSString* key = [NSString stringWithFormat:@"%@-%@",self.object,self.Id];
+   // NSString* key = [NSString stringWithFormat:@"%@-%@",self.object,self.Id];
 //    arr = [[InstagramSubscriptionManager sharedInstance].subscriptionMedia objectForKey:key];
 //    if(arr==nil)
 //    {
