@@ -97,6 +97,7 @@ static NSString* access_token;
     loginDelegate.onError = ^(NSString* error)
     {
         delegate = nil;
+        
         callback(nil,error);
     };  
     

@@ -38,7 +38,11 @@
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    onError([error localizedDescription]);
+    NSString* failedUrl = error.userInfo[@"NSErrorFailingURLStringKey"];
+    if([failedUrl rangeOfString:@"www.slickflick.com"].location==NSNotFound)
+    {
+        onError([error localizedDescription]);
+    }
 }
 
 -(NSMutableDictionary *)parseQueryString:(NSString *)query {
