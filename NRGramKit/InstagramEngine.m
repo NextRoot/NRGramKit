@@ -7,7 +7,6 @@
 //
 
 #import "InstagramEngine.h"
-#import "JSONKit.h"
 #import "SBJSONCategories.h"
 
 @implementation InstagramEngine
