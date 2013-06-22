@@ -16,7 +16,7 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString* host = [[request URL] host];
-    if([host rangeOfString:@"api.instamapapp.com"].location!=NSNotFound)
+    if([host rangeOfString:@"www.slickflick.com"].location!=NSNotFound)
     {
         NSString* frag = [[request URL] fragment];
         NSMutableDictionary*dict = [self parseQueryString:frag];
@@ -38,7 +38,11 @@
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    onError([error localizedDescription]);
+    NSString* failedUrl = error.userInfo[@"NSErrorFailingURLStringKey"];
+    if([failedUrl rangeOfString:@"www.slickflick.com"].location==NSNotFound)
+    {
+        onError([error localizedDescription]);
+    }
 }
 
 -(NSMutableDictionary *)parseQueryString:(NSString *)query {

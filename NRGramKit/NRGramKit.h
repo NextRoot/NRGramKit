@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MKNetworkEngine.h"
 #import "IGMetadata.h"
 #import "Notification.h"
 #import "IGUser.h"

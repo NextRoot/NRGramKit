@@ -97,6 +97,7 @@ static NSString* access_token;
     loginDelegate.onError = ^(NSString* error)
     {
         delegate = nil;
+        
         callback(nil,error);
     };  
     
@@ -128,7 +129,7 @@ static NSString* access_token;
     [self getUrl:url withCompleteCallback:^(NSDictionary* pagination,NSDictionary* data,NSDictionary* meta)
      {
          IGPagination* pg = nil;
-         if(pagination!=nil)
+         if(pagination!=nil && [pagination isKindOfClass:[NSDictionary class]])
          {
              pg = [IGPagination paginationWithDictionary:pagination];
          }
