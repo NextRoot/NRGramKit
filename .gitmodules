@@ -1,6 +1,0 @@
-[submodule "External/JSONKit"]
-	path = External/JSONKit
-	url = git://github.com/NextRoot/JSONKit.git
-[submodule "External/MKNetworkKit"]
-	path = External/MKNetworkKit
-	url = https://github.com/NextRoot/MKNetworkKit

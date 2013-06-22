@@ -7,19 +7,19 @@
 //
 
 #import "InstagramEngine.h"
-#import "JSONKit.h"
+#import "SBJSONCategories.h"
 
 @implementation InstagramEngine
 
-InstagramEngine* _sharedEngine;
+InstagramEngine* _sharedIGEngine;
 
 +(InstagramEngine*)sharedEngine
 {
-    if(_sharedEngine==nil)
+    if(_sharedIGEngine==nil)
     {
-        _sharedEngine = [[InstagramEngine alloc] initWithHostName:@"api.instagram.com" customHeaderFields:nil];
+        _sharedIGEngine = [[InstagramEngine alloc] initWithHostName:@"api.instagram.com" customHeaderFields:nil];
     }
-    return _sharedEngine;
+    return _sharedIGEngine;
 }
 
 -(MKNetworkOperation*)bodyForPath:(NSString*)path 
@@ -41,7 +41,7 @@ InstagramEngine* _sharedEngine;
          if(![completedOperation isCachedResponse])
          {
              NSString *valueString = [completedOperation responseString];       
-             completionBlock([valueString objectFromJSONString]);
+             completionBlock([valueString JSONValue]);
          }
          
      }onError:^(NSError* error) {
