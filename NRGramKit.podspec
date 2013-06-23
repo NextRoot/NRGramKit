@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     puts <<-TEXT
     * NRGramKit note *
     Don't forget to create and add NRGramKitConfigs.plist file to you project.
-    You can find an example here: https://github.com/NextRoot/NRGramKit/MKStoreKitConfigs.plist
+    You can find an example here: https://github.com/NextRoot/NRGramKit/blob/master/NRGramKitConfigs.plist
     TEXT
     end
 
