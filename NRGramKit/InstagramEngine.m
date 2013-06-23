@@ -32,7 +32,8 @@ InstagramEngine* _sharedIGEngine;
 {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL,path]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:verb];
     AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         completionBlock(JSON);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
