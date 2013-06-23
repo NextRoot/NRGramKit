@@ -23,8 +23,6 @@ Pod::Spec.new do |s|
   #
   s.requires_arc = true
   s.dependency 'AFNetworking', '~> 1.3.1'
-  s.dependency 'SBJSONCategories','~>1.0'
-    
     
     def s.post_install(target)
     puts <<-TEXT
