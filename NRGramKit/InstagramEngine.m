@@ -7,7 +7,6 @@
 //
 
 #import "InstagramEngine.h"
-#import "SBJSONCategories.h"
 #define BASE_URL @"https://api.instagram.com"
 
 
