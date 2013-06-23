@@ -6,9 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define CLIENT_ID               @"26245b7c180e41039e8835fc7e481a43"
-#define CLIENT_SECRET           @"e8e0f2093e9a4996a6f4c1a4509f8100"
-#define CALLBACK_URL            @"http://www.slickflick.com"//replace in InstagramLoginDelegate.m too!
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 #endif
 

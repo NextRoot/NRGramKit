@@ -8,6 +8,8 @@
 
 #import "InstagramEngine.h"
 #import "SBJSONCategories.h"
+#define BASE_URL @"https://api.instagram.com"
+
 
 @implementation InstagramEngine
 
@@ -17,39 +19,27 @@ InstagramEngine* _sharedIGEngine;
 {
     if(_sharedIGEngine==nil)
     {
-        _sharedIGEngine = [[InstagramEngine alloc] initWithHostName:@"api.instagram.com" customHeaderFields:nil];
+        _sharedIGEngine = [[InstagramEngine alloc] init];
     }
     return _sharedIGEngine;
 }
 
--(MKNetworkOperation*)bodyForPath:(NSString*)path 
+
+-(AFJSONRequestOperation*)bodyForPath:(NSString*)path
                              verb:(NSString*)verb 
                              body:(NSMutableDictionary*)body
                      onCompletion:(InstagramBodyResponseBlock) completionBlock
-                          onError:(MKNKErrorBlock) errorBlock
+                          onError:(void (^)( NSError *error)) errorBlock
 {
-    MKNetworkOperation *op = [self operationWithPath:path
-                                              params:body 
-                                          httpMethod:verb
-                                                 ssl:YES];
     
-    [op onCompletion:^(MKNetworkOperation *completedOperation)
-     {
-         // the completionBlock will be called twice. 
-         // if you are interested only in new values, move that code within the else block
-         
-         if(![completedOperation isCachedResponse])
-         {
-             NSString *valueString = [completedOperation responseString];       
-             completionBlock([valueString JSONValue]);
-         }
-         
-     }onError:^(NSError* error) {
-         
-         errorBlock(error);
-     }];
-    
-    [self enqueueOperation:op];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL,path]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        completionBlock(JSON);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        errorBlock(error);
+    }];
+    [op start];
     
     return op;   
 }

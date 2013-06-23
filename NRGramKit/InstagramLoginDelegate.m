@@ -8,15 +8,36 @@
 
 #import "InstagramLoginDelegate.h"
 
+@interface InstagramLoginDelegate (){
+    NSString* callbackURL;
+}
+
+@end
+
 @implementation InstagramLoginDelegate
 
 @synthesize onSuccess;
 @synthesize onError;
 @synthesize onLoadingChanged;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        NSBundle *bundle = [NSBundle mainBundle];
+        //NSLog(bundle);
+        NSString *path = [bundle pathForResource:@"NRGramKitConfigs" ofType:@"plist"];
+        NSDictionary* configs = [[NSDictionary alloc]initWithContentsOfFile:path];
+        NSString* urlString = configs[@"InstagramClientCallbackURL"];
+        NSURL* url = [NSURL URLWithString:urlString];
+        callbackURL = [url host];
+    }
+    return self;
+}
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString* host = [[request URL] host];
-    if([host rangeOfString:@"www.slickflick.com"].location!=NSNotFound)
+    if([host rangeOfString:callbackURL].location!=NSNotFound)
     {
         NSString* frag = [[request URL] fragment];
         NSMutableDictionary*dict = [self parseQueryString:frag];
@@ -39,7 +60,7 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSString* failedUrl = error.userInfo[@"NSErrorFailingURLStringKey"];
-    if([failedUrl rangeOfString:@"www.slickflick.com"].location==NSNotFound)
+    if([failedUrl rangeOfString:callbackURL].location==NSNotFound)
     {
         onError([error localizedDescription]);
     }

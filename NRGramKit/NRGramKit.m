@@ -17,6 +17,8 @@
 #define kLoggedInUserKey                                @"NSGramKit_logged_in_user"
 
 static NSString* access_token;
+static NSString* client_id;
+static NSString* callback_url;
 
 @implementation NRGramKit
 
@@ -24,6 +26,13 @@ static NSString* access_token;
 +(void)initialize
 {
     access_token = [[NSUserDefaults standardUserDefaults] objectForKey:kAccessTokenKey];
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    //NSLog(bundle);
+    NSString *path = [bundle pathForResource:@"NRGramKitConfigs" ofType:@"plist"];
+    NSDictionary* configs = [[NSDictionary alloc]initWithContentsOfFile:path];
+    callback_url = configs[@"InstagramClientCallbackURL"];
+    client_id = configs[@"InstagramClientId"];
 }
 
 +(void)setAccessToken:(NSString*)accessToken;
@@ -111,8 +120,8 @@ static NSString* access_token;
         [storage deleteCookie:cookie];
     }
     
-    NSString* returnUrl = CALLBACK_URL;
-    NSString* authUrl = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&display=touch&scope=likes+comments+relationships",CLIENT_ID,returnUrl];
+    NSString* returnUrl = callback_url;
+    NSString* authUrl = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&display=touch&scope=likes+comments+relationships",client_id,returnUrl];
     [webview loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:authUrl] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0]];
 }
 
@@ -234,7 +243,7 @@ static NSString* access_token;
 
 +(void)getUserWithName:(NSString*)name withCallback: (UserArrayResultBlock)callback{
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?q=%@&%@=%@",kInstagramApiBaseUrl,@"users",@"search",name,currentParam,currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
      {
@@ -249,7 +258,7 @@ static NSString* access_token;
 +(void)getUsersWhoFollowUserWithId:(NSString*)Id count:(int)count withCallback: (UserArrayResultBlock)callback
 {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@/%@?count=%d&%@=%@",kInstagramApiBaseUrl,@"users",Id,@"followed-by",count,currentParam,currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
@@ -265,7 +274,7 @@ static NSString* access_token;
 +(void)getUsersFollowingUserWithId:(NSString*)Id count:(int)count withCallback: (UserArrayResultBlock)callback
 {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@/%@?count=%d&%@=%@",kInstagramApiBaseUrl,@"users",Id,@"follows",count,currentParam,currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
@@ -392,7 +401,7 @@ static NSString* access_token;
 
 +(void)getMediaRecentInUserWithId:(NSString*)Id count:(int)count minId:(NSString*)minId maxId:(NSString*)maxId minTimestamp:(NSDate*)minTimestamp maxTimestamp:(NSDate*)maxTimestamp withCallback:(MediaArrayResultBlock)callback{
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* countParam = count>0?[NSString stringWithFormat:@"&count=%d",count]:@"";
     
@@ -417,7 +426,7 @@ static NSString* access_token;
 +(void)getMediaRecentInLocationWithId:(NSString*)Id count:(int)count minId:(NSString*)minId maxId:(NSString*)maxId minTimestamp:(NSDate*)minTimestamp maxTimestamp:(NSDate*)maxTimestamp withCallback:(MediaArrayResultBlock)callback
 {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* earlierParam = maxTimestamp!=nil?[NSString stringWithFormat:@"&max_timestamp=%d",(int)[maxTimestamp timeIntervalSince1970]]:@"";
     NSString* laterParam = minTimestamp!=nil?[NSString stringWithFormat:@"&min_timestamp=%d",(int)[minTimestamp timeIntervalSince1970]]:@"";
@@ -440,7 +449,7 @@ static NSString* access_token;
 
 +(void)getMediaRecentInTagWithName:(NSString*)name count:(int)count maxTagId:(NSString*)maxTagId minTagId:(NSString*)minTagId withCallback:(MediaArrayResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* minTagIdParam = minTagId!=nil?[NSString stringWithFormat:@"&min_tag_id=%@",minTagId]:@"";
     NSString* maxTagIdParam = maxTagId!=nil?[NSString stringWithFormat:@"&max_tag_id=%@",maxTagId]:@"";
@@ -460,7 +469,7 @@ static NSString* access_token;
 +(void)getMediaRecentInGeographyWithId:(NSString*)Id count:(int)count
                           withCallback:(MediaArrayResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@/%@?count=%d&%@=%@",kInstagramApiBaseUrl,@"geographies",Id,@"media/recent",count,currentParam,currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
      {
@@ -474,7 +483,7 @@ static NSString* access_token;
 
 +(void)getMediaWithId:(NSString*)Id withCallback: (MediaResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
 
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?%@=%@",kInstagramApiBaseUrl,@"media",Id,currentParam, currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
@@ -486,7 +495,7 @@ static NSString* access_token;
 
 +(void)getMediaSearchAtLatitude:(double)lat longitude:(double)lng radius:(int)radius count:(int)count earlierThan:(NSDate*)earlierDate laterThen:(NSDate*)laterDate withCallback: (MediaArrayResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* earlierParam = earlierDate!=nil?[NSString stringWithFormat:@"&max_timestamp=%d",(int)[earlierDate timeIntervalSince1970]]:@"";
     
@@ -513,7 +522,7 @@ static NSString* access_token;
 
 +(void)getMediaPopularWithCallback:(MediaArrayResultBlock)callback{
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?%@=%@",kInstagramApiBaseUrl,@"media",@"popular",currentParam,currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
      {
@@ -533,7 +542,7 @@ static NSString* access_token;
 
 +(void)getLocationWithId:(NSString*)Id withCallback: (LocationResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
 
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?%@=%@",kInstagramApiBaseUrl,@"locations",Id,currentParam, currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
@@ -544,7 +553,7 @@ static NSString* access_token;
 
 +(void)getLocationsSearchAtLatitude:(double)lat longitude:(double)lng radius:(int)radius withCallback: (LocationArrayResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
 
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?lat=%f&lng=%f&radius=%d&count=40&%@=%@",kInstagramApiBaseUrl,@"locations",@"search",lat,lng,radius,currentParam, currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
@@ -562,7 +571,7 @@ static NSString* access_token;
 
 +(void)getTagWithName:(NSString*)name withCallback: (TagResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?%@=%@",kInstagramApiBaseUrl,@"tags",name,currentParam, currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
@@ -578,7 +587,7 @@ static NSString* access_token;
 
 +(void)getTagSearchWithName:(NSString*)name withCallback: (TagArrayResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@?q=%@&%@=%@",kInstagramApiBaseUrl,@"tags",@"search",name,currentParam, currentParamValue];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
      {
@@ -593,7 +602,7 @@ static NSString* access_token;
 #pragma mark - Comments -
 +(void)getCommentsInMediaWithId:(NSString*)mediaId count:(int)count withCallback:(CommentArrayResultBlock)callback {
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
         NSString* countParam = count>0?[NSString stringWithFormat:@"&count=%d",count]:@"";
     
     NSString* url = [NSString stringWithFormat:@"%@/%@/%@/%@?%@=%@%@",kInstagramApiBaseUrl,@"media",mediaId,@"comments",currentParam,currentParamValue,countParam];
@@ -638,7 +647,7 @@ static NSString* access_token;
 
 +(void)getLikesInMediaWithId:(NSString*)mediaId count:(int)count withCallback:(CommentArrayResultBlock)callback{
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
-    NSString* currentParamValue  = [self isLoggedIn]?access_token:CLIENT_ID;
+    NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
     NSString* countParam = count>0?[NSString stringWithFormat:@"&count=%d",count]:@"";
     
      NSString* url = [NSString stringWithFormat:@"%@/%@/%@/%@?%@=%@%@",kInstagramApiBaseUrl,@"media",mediaId,@"likes",currentParam,currentParamValue,countParam];

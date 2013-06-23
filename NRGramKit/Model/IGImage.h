@@ -17,6 +17,4 @@
 @property (nonatomic, retain) NSString * thumbnail;
 +(IGImage*)imageWithDictionary:(NSDictionary*)dict;
 
-@property (nonatomic,readonly) NSString* preferedThumbnail;
-
 @end

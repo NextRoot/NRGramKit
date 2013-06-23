@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C45A9146177702C800DB5EDA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45A9145177702C800DB5EDA /* MobileCoreServices.framework */; };
+		C45A9148177702CE00DB5EDA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45A9147177702CE00DB5EDA /* SystemConfiguration.framework */; };
 		C4BC47A9156FB08600EA15F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC47A8156FB08600EA15F7 /* Foundation.framework */; };
 		C4BC47AF156FB08600EA15F7 /* NRGramKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47AE156FB08600EA15F7 /* NRGramKit.m */; };
 		C4BC47CA156FB0DF00EA15F7 /* InstagramEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */; };
@@ -33,14 +35,21 @@
 		C4BC480D156FB16200EA15F7 /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47F9156FB16200EA15F7 /* IGUser.m */; };
 		C4BC480E156FB16200EA15F7 /* Notification.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BC47FA156FB16200EA15F7 /* Notification.h */; };
 		C4BC480F156FB16200EA15F7 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC47FB156FB16200EA15F7 /* Notification.m */; };
+		F0736808A5E14CA2AC30DFA0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4009C748D8A476EB129AAA2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BEDDD505C96F40DBA74EBA5B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		C45A913D1776F78200DB5EDA /* NRGramKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NRGramKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C45A913E1776F7E800DB5EDA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C45A9145177702C800DB5EDA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C45A9147177702CE00DB5EDA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C45A91491777054C00DB5EDA /* NRGramKitConfigs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NRGramKitConfigs.plist; sourceTree = "<group>"; };
 		C4BC47A5156FB08600EA15F7 /* libNRGramKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNRGramKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BC47A8156FB08600EA15F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BC47AC156FB08600EA15F7 /* NRGramKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGramKit-Prefix.pch"; sourceTree = "<group>"; };
 		C4BC47AD156FB08600EA15F7 /* NRGramKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRGramKit.h; sourceTree = "<group>"; };
-		C4BC47AE156FB08600EA15F7 /* NRGramKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRGramKit.m; sourceTree = "<group>"; };
+		C4BC47AE156FB08600EA15F7 /* NRGramKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NRGramKit.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C4BC47C6156FB0DF00EA15F7 /* InstagramEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramEngine.h; sourceTree = "<group>"; };
 		C4BC47C7156FB0DF00EA15F7 /* InstagramEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramEngine.m; sourceTree = "<group>"; };
 		C4BC47C8156FB0DF00EA15F7 /* InstagramLoginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +74,7 @@
 		C4BC47F9156FB16200EA15F7 /* IGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUser.m; sourceTree = "<group>"; };
 		C4BC47FA156FB16200EA15F7 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		C4BC47FB156FB16200EA15F7 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+		F4009C748D8A476EB129AAA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45A9148177702CE00DB5EDA /* SystemConfiguration.framework in Frameworks */,
+				C45A9146177702C800DB5EDA /* MobileCoreServices.framework in Frameworks */,
 				C4BC47A9156FB08600EA15F7 /* Foundation.framework in Frameworks */,
+				F0736808A5E14CA2AC30DFA0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +95,15 @@
 		C4BC479A156FB08600EA15F7 = {
 			isa = PBXGroup;
 			children = (
+				C45A9147177702CE00DB5EDA /* SystemConfiguration.framework */,
+				C45A9145177702C800DB5EDA /* MobileCoreServices.framework */,
+				C45A913E1776F7E800DB5EDA /* Podfile */,
+				C45A913D1776F78200DB5EDA /* NRGramKit.podspec */,
+				C45A91491777054C00DB5EDA /* NRGramKitConfigs.plist */,
 				C4BC47AA156FB08600EA15F7 /* NRGramKit */,
 				C4BC47A7156FB08600EA15F7 /* Frameworks */,
 				C4BC47A6156FB08600EA15F7 /* Products */,
+				BEDDD505C96F40DBA74EBA5B /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C4BC47A8156FB08600EA15F7 /* Foundation.framework */,
+				F4009C748D8A476EB129AAA2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4BC47B2156FB08600EA15F7 /* Build configuration list for PBXNativeTarget "NRGramKit" */;
 			buildPhases = (
+				B4C121CB7EBA41DCAA5909FC /* Check Pods Manifest.lock */,
 				C4BC47A1156FB08600EA15F7 /* Sources */,
 				C4BC47A2156FB08600EA15F7 /* Frameworks */,
 				C4BC47A3156FB08600EA15F7 /* Headers */,
+				5856ED8B4D5346F1B2D77248 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +244,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5856ED8B4D5346F1B2D77248 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		B4C121CB7EBA41DCAA5909FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4BC47A1156FB08600EA15F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -249,7 +302,6 @@
 		C4BC47B0156FB08600EA15F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -277,7 +329,6 @@
 		C4BC47B1156FB08600EA15F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -298,33 +349,25 @@
 		};
 		C4BC47B3156FB08600EA15F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDDD505C96F40DBA74EBA5B /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NRGramKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRGramKit/NRGramKit-Prefix.pch";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "../../External/**";
 			};
 			name = Debug;
 		};
 		C4BC47B4156FB08600EA15F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDDD505C96F40DBA74EBA5B /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NRGramKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRGramKit/NRGramKit-Prefix.pch";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "../../External/**";
 			};
 			name = Release;
 		};

@@ -9,7 +9,6 @@
 #import "IGImage.h"
 
 @implementation IGImage
-@synthesize thumbnail,low_resolution,standard_resolution,preferedThumbnail;
 +(IGImage*)imageWithDictionary:(NSDictionary*)dict
 {
     IGImage* image = [[IGImage alloc]init];
@@ -22,18 +21,5 @@
     image.thumbnail =[thumbnailDictionary objectForKey:@"url"];
     
     return image;
-}
-
--(NSString *)preferedThumbnail
-{
-    return self.thumbnail;
-//    if([InstagramSubscriptionManager sharedInstance].isUsingHighQualityImages)
-//    {
-//        return self.low_resolution;
-//    }
-//    else
-//    {
-//        return self.thumbnail;
-//    }
 }
 @end
