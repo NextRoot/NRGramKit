@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name         = "NRGramKit"
-  s.version      = "1.1"
+  s.version      = "1.4"
   s.summary      = "A simple block-based library to access all the functions of the Instagram API."
   s.homepage     = "https://github.com/NextRoot/NRGramKit"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
