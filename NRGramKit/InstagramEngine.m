@@ -24,7 +24,7 @@ InstagramEngine* _sharedIGEngine;
 }
 
 
--(AFJSONRequestOperation*)bodyForPath:(NSString*)path
+-(AFHTTPRequestOperation*)bodyForPath:(NSString*)path
                              verb:(NSString*)verb 
                              body:(NSMutableDictionary*)body
                      onCompletion:(InstagramBodyResponseBlock) completionBlock
@@ -32,16 +32,25 @@ InstagramEngine* _sharedIGEngine;
 {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_URL,path]];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:verb];
-    AFJSONRequestOperation *op = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        completionBlock(JSON);
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        errorBlock(error);
-    }];
-    [op start];
     
-    return op;   
+    AFHTTPClient* client = [[AFHTTPClient alloc]initWithBaseURL:[NSURL URLWithString:BASE_URL]];
+    [client setParameterEncoding:AFFormURLParameterEncoding];
+    NSMutableURLRequest* request = [client requestWithMethod:verb path:path parameters:body];
+    
+    
+    AFHTTPRequestOperation* operation = [client HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSError* error = nil;
+        id object = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+        completionBlock(object);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         errorBlock(error);
+    }];
+
+    
+
+    [client enqueueHTTPRequestOperation:operation];
+    
+    return operation;
 }
 
 @end

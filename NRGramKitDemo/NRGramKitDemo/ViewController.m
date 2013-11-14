@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[NRGramKit getMediaPopularWithCallback:^(NSArray* popularMedia,IGPagination* pagination)
+	[NRGramKit getMediaPopularCount:20 withCallback:^(NSArray* popularMedia,IGPagination* pagination)
      {
          currentDataSource = popularMedia;
          [self.tableView reloadData];
@@ -50,7 +50,18 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     
+    cell.imageView.image = nil;
     IGMedia* media = [currentDataSource objectAtIndex:indexPath.row];
+    dispatch_async(
+                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+                       NSData* imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:media.image.thumbnail]];
+                       dispatch_async(dispatch_get_main_queue(), ^{
+                           cell.imageView.image =[UIImage imageWithData:imageData];
+                           [cell setNeedsLayout];
+                           [cell setNeedsDisplay];
+                       });
+
+                   });
     cell.textLabel.text = media.user.full_name;
     cell.detailTextLabel.text = media.user.username;
     

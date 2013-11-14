@@ -22,6 +22,8 @@
 typedef void (^UserResultBlock)(IGUser*);
 typedef void (^MediaResultBlock)(IGMedia*);
 typedef void (^LocationResultBlock)(IGLocation*);
+typedef void (^SubscriptionsResultBlock)(NSArray* subscriptions);
+typedef void (^SubscriptionResultBlock)(IGSubscription* subscription);
 typedef void (^TagResultBlock)(IGTag*);
 typedef void (^UserArrayResultBlock)(NSArray*);
 typedef void (^CommentArrayResultBlock)(NSArray*,IGPagination*);
@@ -49,6 +51,14 @@ typedef enum {
 } IGOutgoingRelationshipStatus;
 
 typedef enum {
+    IGSubscriptionTypeUsers,
+    IGSubscriptionTypeLocation,
+    IGSubscriptionTypeTag,
+    IGSubscriptionTypeGeography,
+    IGSubscriptionTypeAll
+} IGSubscriptionType;
+
+typedef enum {
     IGRelationshipActionFollow,
     IGRelationshipActionUnfollow,
     IGRelationshipActionBlock,
@@ -72,6 +82,7 @@ typedef void(^RelationshipResultBlock)(IGIncomingRelationshipStatus,IGOutgoingRe
 +(void)setAccessToken:(NSString*)accessToken;
 
 +(void)getUserWithId:(NSString*)Id withCallback: (UserResultBlock)callback;
++(void)getUserWithName:(NSString*)name limit:(int)limit withCallback: (UserArrayResultBlock)callback;
 +(void)getUserWithName:(NSString*)name withCallback: (UserArrayResultBlock)callback;
 
 +(void)getUsersWhoFollowUserWithId:(NSString*)Id count:(int)count withCallback: (UserArrayResultBlock)callback;
@@ -92,7 +103,7 @@ typedef void(^RelationshipResultBlock)(IGIncomingRelationshipStatus,IGOutgoingRe
      withCallback:(MediaArrayResultBlock)callback;
 +(void)getMediaWithId:(NSString*)Id withCallback: (MediaResultBlock)callback;
 +(void)getMediaSearchAtLatitude:(double)lat longitude:(double)lng radius:(int)radius count:(int)count earlierThan:(NSDate*)earlierDate laterThen:(NSDate*)laterDate withCallback:  (MediaArrayResultBlock)callback;
-+(void)getMediaPopularWithCallback:(MediaArrayResultBlock)callback;
++(void)getMediaPopularCount:(int)count withCallback:(MediaArrayResultBlock)callback;
 
 +(void)getLocationWithId:(NSString*)Id withCallback: (LocationResultBlock)callback;
 +(void)getLocationsSearchAtLatitude:(double)lat longitude:(double)lng radius:(int)radius withCallback: (LocationArrayResultBlock)callback;
@@ -107,5 +118,15 @@ typedef void(^RelationshipResultBlock)(IGIncomingRelationshipStatus,IGOutgoingRe
 +(void)getLikesInMediaWithId:(NSString*)mediaId count:(int)count withCallback:(CommentArrayResultBlock)callback;
 +(void)postLikeInMediaWithId:(NSString*)mediaId withCallback:(OperationSuccessBlock)callback;
 +(void)removeLikeInMediaWithId:(NSString*)mediaId withCallback:(OperationSuccessBlock)callback;
+
+
++(void)removeSubscriptionWithType:(IGSubscriptionType)subscriptionType withCallback:(OperationSuccessBlock)callback;
++(void)removeSubscriptionWithId:(NSString*)subscriptionId withCallback:(OperationSuccessBlock)callback;
++(void)getSubscriptionsWithCallback:(SubscriptionsResultBlock)callback;
+
++(void)addSubscriptionForUsersWithCallback:(SubscriptionResultBlock)callback;
++(void)addSubscriptionForLocation:(NSString*)locationId withCallback:(SubscriptionResultBlock)callback;
++(void)addSubscriptionForTag:(NSString*)tag withCallback:(SubscriptionResultBlock)callback;
++(void)addSubscriptionForLat:(double)lat lng:(double)lng radius:(int)radius withCallback:(SubscriptionResultBlock)callback;
 
 @end

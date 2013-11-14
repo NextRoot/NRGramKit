@@ -18,7 +18,7 @@
 }
 @property (nonatomic, retain) NSNumber * comment_count;
 @property (nonatomic, retain) NSString * Id;
-@property (nonatomic, retain) NSString * created_time;
+@property (nonatomic, retain) NSNumber * created_time;
 @property (nonatomic, retain) NSString * link;
 @property (nonatomic, retain) NSNumber * userHasLiked;
 @property (nonatomic, retain) NSString * type;

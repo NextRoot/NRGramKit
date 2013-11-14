@@ -14,21 +14,17 @@
 }
 
 @property (nonatomic, retain) NSNumber * radius;
-@property (nonatomic, retain) NSString * object;
-@property (nonatomic, retain) NSString * Id;
-@property (nonatomic, retain) NSString * geographyId;
-@property (nonatomic, retain) NSString * object_name;
 @property (nonatomic, retain) NSNumber * lat;
 @property (nonatomic, retain) NSNumber * lng;
-@property (nonatomic, retain) NSNumber * isEnabled;
-@property (assign) int mediaCount;
-@property (assign) BOOL isSelected;
-@property (retain) NSString* maxTagId;
-@property (retain) NSString* minTagId;
-@property (readonly) NSMutableArray* currentMedia;
-@property (assign) BOOL loadedAllMedia;
-@property (readonly) NSString* key;
+@property (nonatomic, retain) NSString * object;
+@property (nonatomic, retain) NSString * Id;
+@property (nonatomic, retain) NSString * object_id;
+@property (nonatomic, retain) NSString * aspect;
+@property (nonatomic, retain) NSString * callback_url;
 
+
+
++(IGSubscription*)subscriptionWithDictionary:(NSDictionary*)dict;
 +(IGSubscription*)subscriptionFor:(NSString*)object withId:(NSString*)Id name:(NSString*)name;
 
 @end

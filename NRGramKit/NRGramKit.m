@@ -18,6 +18,7 @@
 
 static NSString* access_token;
 static NSString* client_id;
+static NSString* client_secret;
 static NSString* callback_url;
 
 @implementation NRGramKit
@@ -33,6 +34,8 @@ static NSString* callback_url;
     NSDictionary* configs = [[NSDictionary alloc]initWithContentsOfFile:path];
     callback_url = configs[@"InstagramClientCallbackURL"];
     client_id = configs[@"InstagramClientId"];
+    client_secret = configs[@"InstagramClientSecret"];
+    
 }
 
 +(void)setAccessToken:(NSString*)accessToken;
@@ -150,6 +153,7 @@ static NSString* callback_url;
 {
     [[InstagramEngine sharedEngine] bodyForPath:url verb:verb body:params onCompletion:^(NSDictionary* body)
      {
+         
          if([body isKindOfClass:[NSDictionary class]])
          {
              NSNumber* code = [body objectForKey:@"code"];
@@ -243,9 +247,13 @@ static NSString* callback_url;
 }
 
 +(void)getUserWithName:(NSString*)name withCallback: (UserArrayResultBlock)callback{
+    return [self getUserWithName:name limit:20 withCallback:callback];
+}
+
++(void)getUserWithName:(NSString*)name limit:(int)limit withCallback: (UserArrayResultBlock)callback{
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
     NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
-    NSString* url = [NSString stringWithFormat:@"%@/%@/%@?q=%@&%@=%@",kInstagramApiBaseUrl,@"users",@"search",name,currentParam,currentParamValue];
+    NSString* url = [NSString stringWithFormat:@"%@/%@/%@?q=%@&%@=%@&count=%d",kInstagramApiBaseUrl,@"users",@"search",name,currentParam,currentParamValue,limit];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
      {
          NSMutableArray* array = [[NSMutableArray alloc]init];
@@ -521,10 +529,10 @@ static NSString* callback_url;
      }];
 }
 
-+(void)getMediaPopularWithCallback:(MediaArrayResultBlock)callback{
++(void)getMediaPopularCount:(int)count withCallback:(MediaArrayResultBlock)callback{
     NSString* currentParam = [self isLoggedIn]?@"access_token":@"client_id";
     NSString* currentParamValue  = [self isLoggedIn]?access_token:client_id;
-    NSString* url = [NSString stringWithFormat:@"%@/%@/%@?%@=%@",kInstagramApiBaseUrl,@"media",@"popular",currentParam,currentParamValue];
+    NSString* url = [NSString stringWithFormat:@"%@/%@/%@?%@=%@&count=%d",kInstagramApiBaseUrl,@"media",@"popular",currentParam,currentParamValue,count];
     [NRGramKit getUrl:url withCallback:^(IGPagination* pagination,NSDictionary* dict)
      {
          NSMutableArray* array = [[NSMutableArray alloc]init];
@@ -684,5 +692,134 @@ static NSString* callback_url;
      }];
 }
 
+#pragma mark - Subscripions -
++(void)removeSubscriptionWithType:(IGSubscriptionType)subscriptionType withCallback:(OperationSuccessBlock)callback{
+    NSString* subscriptionTypeString = nil;
+    switch (subscriptionType) {
+        case IGSubscriptionTypeGeography:
+            subscriptionTypeString = @"geography";
+            break;
+        case IGSubscriptionTypeLocation:
+            subscriptionTypeString = @"location";
+            break;
+        case IGSubscriptionTypeTag:
+            subscriptionTypeString = @"tag";
+            break;
+        case IGSubscriptionTypeUsers:
+            subscriptionTypeString = @"user";
+            break;
+        case IGSubscriptionTypeAll:
+            subscriptionTypeString = @"all";
+            break;
+    }
+    NSString* url = [NSString stringWithFormat:@"/v1/subscriptions?client_id=%@&client_secret=%@&object=%@",client_id,client_secret,subscriptionTypeString];
+    [self requestUrl:url verb:@"DELETE" params:nil withCompleteCallback:^(NSDictionary* pagination,NSDictionary* data,NSDictionary* meta)
+     {
+         NSString* code= [meta objectForKey:@"code"];
+         if([code intValue]==200) callback(YES);
+         else callback(NO);
+     }];
+}
+
++(void)removeSubscriptionWithId:(NSString*)subscriptionId withCallback:(OperationSuccessBlock)callback{
+   
+    NSString* url = [NSString stringWithFormat:@"/v1/subscriptions?client_id=%@&client_secret=%@&id=%@",client_id,client_secret,subscriptionId];
+    [self requestUrl:url verb:@"DELETE" params:nil withCompleteCallback:^(NSDictionary* pagination,NSDictionary* data,NSDictionary* meta)
+     {
+         NSString* code= [meta objectForKey:@"code"];
+         if([code intValue]==200) callback(YES);
+         else callback(NO);
+     }];
+}
+
+
++(void)getSubscriptionsWithCallback:(SubscriptionsResultBlock)callback
+{
+    NSString* url = [NSString stringWithFormat:@"/v1/subscriptions?client_id=%@&client_secret=%@",client_id,client_secret];
+    [self requestUrl:url verb:@"GET" params:nil withCompleteCallback:^(NSDictionary* pagination,NSDictionary* data,NSDictionary* meta)
+     {
+         NSMutableArray* subscriptions = [[NSMutableArray alloc]init];
+         for(NSDictionary* dict in data)
+         {
+             [subscriptions addObject:[IGSubscription subscriptionWithDictionary:dict]];
+         }
+         NSString* code= [meta objectForKey:@"code"];
+         if([code intValue]==200) callback(subscriptions);
+         else callback(nil);
+     }];
+}
+
++(void)addSubscriptionWithParams:(NSDictionary*)params andCallback:(SubscriptionResultBlock)callback
+{
+    NSString* url = [NSString stringWithFormat:@"/v1/subscriptions"];
+    [self requestUrl:url verb:@"POST" params:[params mutableCopy] withCompleteCallback:^(NSDictionary* pagination,NSDictionary* data,NSDictionary* meta)
+     {
+         IGSubscription* subscription = [IGSubscription subscriptionWithDictionary:data];
+         NSString* code= [meta objectForKey:@"code"];
+         if([code intValue]==200) callback(subscription);
+         else callback(NO);
+     }];
+    
+}
+
+
++(void)addSubscriptionForUsersWithCallback:(SubscriptionResultBlock)callback{
+    
+    
+    NSDictionary* params_dict = @{@"client_id":client_id,
+                                  @"client_secret":client_secret,
+                                  @"object":@"user",
+                                  @"aspect":@"media",
+                                  @"verify_token":@"nrgramkit",
+                                  @"callback_url":@"http://andrisan-office.no-ip.org:3002/callbacks/geo/user_subscription"
+                             };
+    [self addSubscriptionWithParams:params_dict andCallback:callback];
+    
+   
+}
+
++(void)addSubscriptionForLocation:(NSString*)locationId withCallback:(SubscriptionResultBlock)callback{
+    
+    
+    NSDictionary* params_dict = @{@"client_id":client_id,
+                                  @"client_secret":client_secret,
+                                  @"object":@"location",
+                                  @"object_id":locationId,
+                                  @"aspect":@"media",
+                                  @"verify_token":@"nrgramkit",
+                                  @"callback_url":@"http://andrisan-office.no-ip.org:3002/callbacks/geo/location_subscription"
+                                  };
+    [self addSubscriptionWithParams:params_dict andCallback:callback];
+}
+
++(void)addSubscriptionForTag:(NSString*)tag withCallback:(SubscriptionResultBlock)callback{
+    
+    
+    NSDictionary* params_dict = @{@"client_id":client_id,
+                                  @"client_secret":client_secret,
+                                  @"object":@"tag",
+                                  @"object_id":tag,
+                                  @"aspect":@"media",
+                                  @"verify_token":@"nrgramkit",
+                                  @"callback_url":@"http://andrisan-office.no-ip.org:3002/callbacks/geo/tag_subscription"
+                                  };
+    [self addSubscriptionWithParams:params_dict andCallback:callback];
+}
+
++(void)addSubscriptionForLat:(double)lat lng:(double)lng radius:(int)radius withCallback:(SubscriptionResultBlock)callback{
+    
+    
+    NSDictionary* params_dict = @{@"client_id":client_id,
+                                  @"client_secret":client_secret,
+                                  @"object":@"geography",
+                                  @"lat":@(lat),
+                                  @"lng":@(lng),
+                                  @"radius":@(radius),
+                                  @"aspect":@"media",
+                                  @"verify_token":@"nrgramkit",
+                                  @"callback_url":@"http://andrisan-office.no-ip.org:3002/callbacks/geo/tag_subscription"
+                                  };
+    [self addSubscriptionWithParams:params_dict andCallback:callback];
+}
 
 @end

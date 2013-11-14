@@ -9,15 +9,6 @@
 #import "IGSubscription.h"
 
 @implementation IGSubscription
-@synthesize radius;
-@synthesize object;
-@synthesize Id;
-@synthesize geographyId;
-@synthesize object_name;
-@synthesize lat;
-@synthesize lng;
-@synthesize isEnabled;
-@synthesize mediaCount,isSelected,maxTagId,minTagId,currentMedia,loadedAllMedia;
 
 - (id)init
 {
@@ -30,12 +21,13 @@
 
 - (void) encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:self.radius forKey:@"radius"];
+    [encoder encodeObject:self.lat forKey:@"lat"];
+    [encoder encodeObject:self.lng forKey:@"lng"];
     [encoder encodeObject:self.object forKey:@"object"];
-        [encoder encodeObject:self.Id forKey:@"Id"];
-        [encoder encodeObject:self.geographyId forKey:@"geographyId"];
-        [encoder encodeObject:self.object_name forKey:@"object_name"];
-        [encoder encodeObject:self.lat forKey:@"lat"];
-        [encoder encodeObject:self.lng forKey:@"lng"];    
+    [encoder encodeObject:self.Id forKey:@"Id"];
+    [encoder encodeObject:self.object_id forKey:@"object_id"];
+    [encoder encodeObject:self.aspect forKey:@"aspect"];
+    [encoder encodeObject:self.callback_url forKey:@"callback_url"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -43,16 +35,31 @@
     self = [super init];
     if(self)
     {
-        self.object =[decoder decodeObjectForKey:@"object"];
-        self.object_name = [decoder decodeObjectForKey:@"object_name"];
-        self.Id= [decoder decodeObjectForKey:@"Id"];
-        self.geographyId = [decoder decodeObjectForKey:@"geographyId"];
         self.lat = [decoder decodeObjectForKey:@"lat"];
         self.lng = [decoder decodeObjectForKey:@"lng"];
         self.radius = [decoder decodeObjectForKey:@"radius"];
+        self.object =[decoder decodeObjectForKey:@"object"];
+        self.object_id = [decoder decodeObjectForKey:@"object_id"];
+        self.Id= [decoder decodeObjectForKey:@"Id"];
+        self.aspect = [decoder decodeObjectForKey:@"aspect"];
+        self.callback_url = [decoder decodeObjectForKey:@"callback_url"];
     }
     
     return self;
+}
+
++(IGSubscription *)subscriptionWithDictionary:(NSDictionary *)dict
+{
+    IGSubscription* sub = [[IGSubscription alloc]init];
+    
+    sub.aspect = dict[@"aspect"];
+    sub.callback_url = dict[@"callback_url"];
+    sub.Id = dict[@"id"];
+    sub.object = dict[@"object"];
+    sub.object_id = [dict[@"object_id"] isKindOfClass:[NSNull class]]?nil:dict[@"object_id"];
+    
+    return sub;
+
 }
 
 + (IGSubscription *)subscriptionFor:(NSString*)object withId:(NSString*)Id name:(NSString*)name
@@ -61,29 +68,15 @@
     
     sub.object = object;
     sub.Id = Id;
-    sub.object_name = name;
-    sub.isEnabled = [NSNumber numberWithBool:YES];
+    sub.object_id = name;
     
     return sub;
 }
 
-- (NSMutableArray *)currentMedia
-{
-    NSMutableArray* arr = nil;
-   // NSString* key = [NSString stringWithFormat:@"%@-%@",self.object,self.Id];
-//    arr = [[InstagramSubscriptionManager sharedInstance].subscriptionMedia objectForKey:key];
-//    if(arr==nil)
-//    {
-//        arr = [[NSMutableArray alloc]init];
-//        [[InstagramSubscriptionManager sharedInstance].subscriptionMedia setObject:arr forKey:key];
-//        [arr release];
-//    }
-    return arr;
-}
 
-- (NSString *)key
+-(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@-%@",self.object,self.Id];
+    return [NSString stringWithFormat:@"subscription - %@ - %@ - %@",self.Id,self.object,self.object_id];
 }
 
 @end

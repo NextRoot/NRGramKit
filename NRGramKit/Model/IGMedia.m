@@ -21,7 +21,7 @@
     media.filter = [dict objectForKey:@"filter"];
     media.link = [dict objectForKey:@"link"];
     
-    media.created_time = [dict objectForKey:@"created_time"];
+    media.created_time =  @([[dict objectForKey:@"created_time"] intValue]);
     
     if([media.received_time longValue]==0)
         media.received_time = [NSNumber numberWithLong:(long)[[NSDate date] timeIntervalSince1970]];

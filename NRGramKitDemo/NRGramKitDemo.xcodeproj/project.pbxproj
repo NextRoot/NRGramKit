@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06CE72D9262C4FEF99A7C555 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0908FB0DE8F4D94B94A6274 /* libPods.a */; };
+		C487095E1834C57D00EC956C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C487095D1834C57D00EC956C /* MobileCoreServices.framework */; };
+		C48709601834C5B000EC956C /* NRGramKitConfigs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C487095F1834C5B000EC956C /* NRGramKitConfigs.plist */; };
 		C48AAED8156FADC4004324FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48AAED7156FADC4004324FA /* UIKit.framework */; };
 		C48AAEDA156FADC4004324FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48AAED9156FADC4004324FA /* Foundation.framework */; };
 		C48AAEDC156FADC4004324FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48AAEDB156FADC4004324FA /* CoreGraphics.framework */; };
@@ -15,30 +18,15 @@
 		C48AAEE8156FADC5004324FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C48AAEE7156FADC5004324FA /* AppDelegate.m */; };
 		C48AAEEB156FADC5004324FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48AAEEA156FADC5004324FA /* ViewController.m */; };
 		C48AAEEE156FADC5004324FA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48AAEEC156FADC5004324FA /* ViewController.xib */; };
-		C4BC4824156FB18A00EA15F7 /* libNRGramKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4820156FB17B00EA15F7 /* libNRGramKit.a */; };
 		C4BC4826156FB1A500EA15F7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4825156FB1A500EA15F7 /* Security.framework */; };
 		C4BC4828156FB1AB00EA15F7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4827156FB1AB00EA15F7 /* CFNetwork.framework */; };
 		C4BC482A156FB1B700EA15F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BC4829156FB1B700EA15F7 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C4BC481F156FB17B00EA15F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4BC47A5156FB08600EA15F7;
-			remoteInfo = NRGramKit;
-		};
-		C4BC4822156FB18700EA15F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C4BC47A4156FB08600EA15F7;
-			remoteInfo = NRGramKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		C0908FB0DE8F4D94B94A6274 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C487095D1834C57D00EC956C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C487095F1834C5B000EC956C /* NRGramKitConfigs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NRGramKitConfigs.plist; sourceTree = "<group>"; };
 		C48AAED3156FADC4004324FA /* NRGramKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NRGramKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48AAED7156FADC4004324FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C48AAED9156FADC4004324FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,10 +40,10 @@
 		C48AAEE9156FADC5004324FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C48AAEEA156FADC5004324FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C48AAEED156FADC5004324FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NRGramKit.xcodeproj; path = ../NRGramKit.xcodeproj; sourceTree = "<group>"; };
 		C4BC4825156FB1A500EA15F7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C4BC4827156FB1AB00EA15F7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C4BC4829156FB1B700EA15F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE15D4411F71424AB18C0600 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +51,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C487095E1834C57D00EC956C /* MobileCoreServices.framework in Frameworks */,
 				C4BC482A156FB1B700EA15F7 /* SystemConfiguration.framework in Frameworks */,
 				C4BC4828156FB1AB00EA15F7 /* CFNetwork.framework in Frameworks */,
 				C4BC4826156FB1A500EA15F7 /* Security.framework in Frameworks */,
-				C4BC4824156FB18A00EA15F7 /* libNRGramKit.a in Frameworks */,
 				C48AAED8156FADC4004324FA /* UIKit.framework in Frameworks */,
 				C48AAEDA156FADC4004324FA /* Foundation.framework in Frameworks */,
 				C48AAEDC156FADC4004324FA /* CoreGraphics.framework in Frameworks */,
+				06CE72D9262C4FEF99A7C555 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +68,11 @@
 		C48AAEC8156FADC4004324FA = {
 			isa = PBXGroup;
 			children = (
-				C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */,
+				C487095F1834C5B000EC956C /* NRGramKitConfigs.plist */,
 				C48AAEDD156FADC4004324FA /* NRGramKitDemo */,
 				C48AAED6156FADC4004324FA /* Frameworks */,
 				C48AAED4156FADC4004324FA /* Products */,
+				DE15D4411F71424AB18C0600 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +87,14 @@
 		C48AAED6156FADC4004324FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C487095D1834C57D00EC956C /* MobileCoreServices.framework */,
 				C4BC4829156FB1B700EA15F7 /* SystemConfiguration.framework */,
 				C4BC4827156FB1AB00EA15F7 /* CFNetwork.framework */,
 				C4BC4825156FB1A500EA15F7 /* Security.framework */,
 				C48AAED7156FADC4004324FA /* UIKit.framework */,
 				C48AAED9156FADC4004324FA /* Foundation.framework */,
 				C48AAEDB156FADC4004324FA /* CoreGraphics.framework */,
+				C0908FB0DE8F4D94B94A6274 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,14 +123,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C4BC4811156FB17B00EA15F7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C4BC4820156FB17B00EA15F7 /* libNRGramKit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,14 +130,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C48AAEF1156FADC5004324FA /* Build configuration list for PBXNativeTarget "NRGramKitDemo" */;
 			buildPhases = (
+				D533F097993C49F082AEE883 /* Check Pods Manifest.lock */,
 				C48AAECF156FADC4004324FA /* Sources */,
 				C48AAED0156FADC4004324FA /* Frameworks */,
 				C48AAED1156FADC4004324FA /* Resources */,
+				BB072A75FFF6498B950DEE82 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C4BC4823156FB18700EA15F7 /* PBXTargetDependency */,
 			);
 			name = NRGramKitDemo;
 			productName = NRGramKitDemo;
@@ -179,12 +164,6 @@
 			mainGroup = C48AAEC8156FADC4004324FA;
 			productRefGroup = C48AAED4156FADC4004324FA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C4BC4811156FB17B00EA15F7 /* Products */;
-					ProjectRef = C4BC4810156FB17B00EA15F7 /* NRGramKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C48AAED2156FADC4004324FA /* NRGramKitDemo */,
@@ -192,27 +171,51 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		C4BC4820156FB17B00EA15F7 /* libNRGramKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libNRGramKit.a;
-			remoteRef = C4BC481F156FB17B00EA15F7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		C48AAED1156FADC4004324FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C48AAEE2156FADC5004324FA /* InfoPlist.strings in Resources */,
+				C48709601834C5B000EC956C /* NRGramKitConfigs.plist in Resources */,
 				C48AAEEE156FADC5004324FA /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB072A75FFF6498B950DEE82 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D533F097993C49F082AEE883 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C48AAECF156FADC4004324FA /* Sources */ = {
@@ -226,14 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C4BC4823156FB18700EA15F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NRGramKit;
-			targetProxy = C4BC4822156FB18700EA15F7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C48AAEE0156FADC5004324FA /* InfoPlist.strings */ = {
@@ -302,6 +297,7 @@
 		};
 		C48AAEF2156FADC5004324FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE15D4411F71424AB18C0600 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRGramKitDemo/NRGramKitDemo-Prefix.pch";
@@ -315,6 +311,7 @@
 		};
 		C48AAEF3156FADC5004324FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE15D4411F71424AB18C0600 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRGramKitDemo/NRGramKitDemo-Prefix.pch";
