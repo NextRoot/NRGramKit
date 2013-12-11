@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IGComment.h"
 #import "IGImage.h"
+#import "IGVideo.h"
 #import "IGLocation.h"
 #import "IGUser.h"
 #import "IGTag.h"
@@ -31,6 +32,7 @@
 @property (nonatomic, retain) NSArray* tags;
 @property (nonatomic, retain) NSArray* likes;
 @property (nonatomic, retain) IGImage * image;
+@property (nonatomic, retain) IGVideo * video;
 @property (nonatomic, retain) IGLocation * location;
 @property (nonatomic, retain) IGUser * user;
 +(IGMedia*)mediaWithDictionary:(NSDictionary*)dict;
