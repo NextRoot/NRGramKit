@@ -26,7 +26,12 @@
     if([media.received_time longValue]==0)
         media.received_time = [NSNumber numberWithLong:(long)[[NSDate date] timeIntervalSince1970]];
     
-    media.image = [IGImage imageWithDictionary:[dict objectForKey:@"images"]];
+    if ([media.type isEqualToString:@"image"]) {
+        media.image = [IGImage imageWithDictionary:[dict objectForKey:@"images"]];
+    } else if ([media.type isEqualToString:@"video"]) {
+        media.video = [IGVideo videoWithDictionary:[dict objectForKey:@"videos"]];
+    }
+    
     media.user = [IGUser userWithDictionary:[dict objectForKey:@"user"]];
     
     NSMutableArray* tagArray = [[NSMutableArray alloc]init];
