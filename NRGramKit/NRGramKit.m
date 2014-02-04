@@ -28,14 +28,32 @@ static NSString* callback_url;
 {
     access_token = [[NSUserDefaults standardUserDefaults] objectForKey:kAccessTokenKey];
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    //NSLog(bundle);
-    NSString *path = [bundle pathForResource:@"NRGramKitConfigs" ofType:@"plist"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"NRGramKitConfigs" ofType:@"plist"];
     NSDictionary* configs = [[NSDictionary alloc]initWithContentsOfFile:path];
     callback_url = configs[@"InstagramClientCallbackURL"];
     client_id = configs[@"InstagramClientId"];
     client_secret = configs[@"InstagramClientSecret"];
     
+}
+
++(void)setClientId:(NSString *)clientId clientSecret:(NSString *)clientSecret andClientCallbackURL:(NSString *)callbackURL
+{
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"NRGramKitConfigs" ofType:@"plist"];
+    NSMutableDictionary* configs = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    
+    if (clientId) {
+        client_id = clientId;
+        [configs setObject:clientId forKey:@"InstagramClientId"];
+    }
+    if (clientSecret) {
+        [configs setObject:clientSecret forKey:@"InstagramClientSecret"];
+    }
+    if (callbackURL) {
+        callback_url = callbackURL;
+        [configs setObject:callbackURL forKey:@"InstagramClientCallbackURL"];
+    }
+    
+    [configs writeToFile:path atomically:YES];
 }
 
 +(void)setAccessToken:(NSString*)accessToken;

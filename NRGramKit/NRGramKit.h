@@ -73,6 +73,8 @@ typedef void(^RelationshipResultBlock)(IGIncomingRelationshipStatus,IGOutgoingRe
 
 @interface NRGramKit : NSObject {
 }
++(void)setClientId:(NSString *)clientId clientSecret:(NSString *)clientSecret andClientCallbackURL:(NSString *)callbackURL;
+
 +(BOOL) isLoggedIn;
 +(IGUser*) loggedInUser;
 +(void)loginInWebView:(UIWebView*)webview loginLoadingCallback:(LoginLoadingBlock)loadingCallback finishedCallback:(LoginResultBlock)callback;
