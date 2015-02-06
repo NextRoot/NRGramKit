@@ -13,7 +13,7 @@ Optionally to make sure you are using the latest version you can specify the pod
 	pod 'NRGramKit', :podspec => 'https://raw.github.com/NextRoot/NRGramKit/master/NRGramKit.podspec'
 
 
-Create an application at [http://intagr.am/developer](http://intagr.am/developer) and create a new plist file in your project called *NRGramKitConfigs.plist* with the following keys:
+Create an application at [http://instagr.am/developer](http://instagr.am/developer) and create a new plist file in your project called *NRGramKitConfigs.plist* with the following keys:
 
 	InstagramClientId
 	InstagramClientSecret
